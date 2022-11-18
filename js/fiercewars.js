@@ -301,7 +301,6 @@ function limitarMovimieto(mapa) {
     if (mascotaJugadorObjeto.y > (mapa.height - mascotaJugadorObjeto.mascotaMapaLargo)) {
         mascotaJugadorObjeto.y = (mapa.height - mascotaJugadorObjeto.mascotaMapaLargo)
     }
-
 }
 
 function revisarColision(enemigo) {
