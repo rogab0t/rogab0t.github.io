@@ -113,7 +113,7 @@ input:checked + label {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    margin-top: 5vh;
+    margin-top: 6vh;
 }
 
 .boton-ataque {
