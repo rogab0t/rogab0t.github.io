@@ -113,8 +113,7 @@ input:checked + label {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    height: 90vh;
-    margin-top: 4vh;
+    margin-top: 5vh;
 }
 
 .boton-ataque {
@@ -171,6 +170,33 @@ input:checked + label {
     font-size: x-large;
 }
 
+@media (max-width: 912px) {
+    #seleccionar-mascota {
+        height: 93vh;
+    }
+
+    #ver-mapa {
+        height: 93vh;
+    }
+
+    .titulo-img {
+        height: 5vh;
+    }
+
+    .selectores, .botones-ataques {
+        flex-direction: column; 
+        margin: 0px;
+    }
+
+    #seleccionar-ataque {
+        margin-top: 15vh;
+    }
+
+    #mensajes {
+        margin: 10px;
+    }
+}
+
 @media (max-width: 690px) {
     #seleccionar-mascota {
         height: 93vh;
@@ -190,7 +216,7 @@ input:checked + label {
     }
 
     #seleccionar-ataque {
-        height: 0vh;
+        margin-top: 5vh;
     }
 
     #mensajes {
@@ -226,6 +252,10 @@ input:checked + label {
     }
 
     #seleccionar-ataque {
-        height: 0vh;
+        margin-top: 6vh;
+    }
+
+    #mensajes {
+        margin: 10px;
     }
 }
