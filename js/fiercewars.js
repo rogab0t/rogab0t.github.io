@@ -228,7 +228,7 @@ function pintarEnCanvas() {
     mascotaJugadorObjeto.y = mascotaJugadorObjeto.y + mascotaJugadorObjeto.velocidadY
 
     if (mascotaJugadorObjeto.velocidadX !== 0 || mascotaJugadorObjeto.velocidadY !== 0) {
-        limitarMovimieto(mapa)
+        limitarMovimieto()
         revisarColision(cubisaurioEnemigo)
         revisarColision(pennysaurioEnemigo)
         revisarColision(wilsonsaurioEnemigo)
@@ -288,7 +288,7 @@ function iniciarMapa() {
     window.addEventListener('keyup', detenerMovimiento)
 }
 
-function limitarMovimieto(mapa) {
+function limitarMovimieto() {
     if (mascotaJugadorObjeto.x < 0) {
         mascotaJugadorObjeto.x = 0
     }

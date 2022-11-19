@@ -114,6 +114,7 @@ input:checked + label {
     justify-content: flex-start;
     align-items: center;
     height: 90vh;
+    margin-top: 4vh;
 }
 
 .boton-ataque {
