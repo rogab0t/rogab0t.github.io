@@ -113,7 +113,7 @@ input:checked + label {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    margin-top: 6vh;
+    margin-top: 4vh;
 }
 
 .boton-ataque {
@@ -216,7 +216,7 @@ input:checked + label {
     }
 
     #seleccionar-ataque {
-        margin-top: 5vh;
+        margin-top: 3vh;
     }
 
     #mensajes {
@@ -252,7 +252,7 @@ input:checked + label {
     }
 
     #seleccionar-ataque {
-        margin-top: 6vh;
+        margin-top: 3vh;
     }
 
     #mensajes {
