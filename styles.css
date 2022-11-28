@@ -154,9 +154,17 @@ input:checked + label {
 
 .informacion {
     display: grid;
-    grid-template-columns: 100px 100px;
+    grid-template-columns: 80px 4px 80px;
     gap: 40px;
     font-size: medium;
+    background-color: #1c2250;
+    padding: 30px;
+    border-radius: 30px;
+    margin: 20px;
+}
+
+.separation-line {
+    background-color: #07122c;
 }
 
 .info-jugador, .info-enemigo {
@@ -189,7 +197,7 @@ input:checked + label {
     }
 
     #seleccionar-ataque {
-        margin-top: 10vh;
+        margin-top: 5vh;
     }
 
     #mensajes {
@@ -257,5 +265,15 @@ input:checked + label {
 
     #mensajes {
         margin: 10px;
+        width: 240px;
+    }
+
+    #boton-reiniciar {
+        width: 240px;
+    }
+
+    .informacion {
+        padding: 30px;
+        gap: 23px;
     }
 }
