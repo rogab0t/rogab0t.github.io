@@ -161,7 +161,7 @@ input:checked + label {
     width: 262px;
     padding-left: 40px;
     border-radius: 20px;
-    margin: 20px;
+    margin: 10px;
 }
 
 .separation-line {
@@ -181,7 +181,7 @@ input:checked + label {
 
 @media (max-width: 912px) {
     #seleccionar-mascota {
-        height: 93vh;
+        height: 95vh;
     }
 
     #ver-mapa {
@@ -208,11 +208,11 @@ input:checked + label {
 
 @media (max-width: 690px) {
     #seleccionar-mascota {
-        height: 93vh;
+        height: 95vh;
     }
 
     #ver-mapa {
-        height: 93vh;
+        height: 88vh;
     }
 
     .titulo-img {
@@ -248,7 +248,7 @@ input:checked + label {
     }
 
     #ver-mapa {
-        height: 93vh;
+        height: 95vh;
     }
 
     #ver-mapa div{
