@@ -124,6 +124,7 @@ input:checked + label {
     padding: 10px;
     border-radius: 20px;
     border-color: transparent;
+    margin: 4px;
 }
 
 #mensajes {
@@ -189,7 +190,7 @@ input:checked + label {
     }
 
     .selectores, .botones-ataques {
-        flex-direction: block; 
+        display: block;
         margin: 15px;
     }
 
@@ -285,7 +286,7 @@ input:checked + label {
     }
 
     .boton-ataque {
-        margin: 3px;
+        margin: 4px;
     }
 
     #mensajes {
