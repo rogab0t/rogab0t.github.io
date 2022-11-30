@@ -154,18 +154,11 @@ input:checked + label {
 
 .informacion {
     display: grid;
-    grid-template-columns: 80px 4px 80px;
-    gap: 30px;
+    grid-template-columns: 150px 150px;
+    gap: 5px;
     font-size: medium;
-    background-color: #1c2250;
-    width: 262px;
-    padding-left: 40px;
-    border-radius: 20px;
-    margin: 10px;
-}
-
-.separation-line {
-    background-color: #0a1736;
+    width: 300px;
+    margin: 20px;
 }
 
 .info-jugador, .info-enemigo {
@@ -173,6 +166,9 @@ input:checked + label {
     flex-direction: column;
     align-items: center;
     color: white;
+    border-radius: 13px;
+    background-color: #1b2250;
+    padding: 7px;
 }
 
 #victoriasmascotajugador, #victoriasmascotaenemigo {
@@ -193,16 +189,23 @@ input:checked + label {
     }
 
     .selectores, .botones-ataques {
-        flex-direction: column; 
-        margin: 0px;
+        flex-direction: block; 
+        margin: 15px;
     }
 
     #seleccionar-ataque {
-        margin-top: 3vh;
+        margin-top: 10vh;
     }
 
     #mensajes {
         margin: 10px;
+    }
+
+    .informacion {
+        grid-template-columns: 150px 150px;
+        width: 300px;
+        gap: 5px;
+        margin: 15px;
     }
 }
 
@@ -220,21 +223,27 @@ input:checked + label {
     }
 
     .selectores, .botones-ataques {
-        flex-direction: column; 
+        display: block;
+        text-align: center;
         margin: 0px;
+    }
+
+    .boton-ataque {
+        margin: 4px;
     }
 
     #seleccionar-ataque {
         margin-top: 3vh;
     }
 
-    .informacion {
-        width: 260px;
-        padding-left: 35px;
-    }
-
     #mensajes {
         margin: 10px;
+    }
+
+    .informacion {
+        grid-template-columns: 150px 150px;
+        width: 300px;
+        margin: 5px;
     }
 }
 
@@ -266,7 +275,17 @@ input:checked + label {
     }
 
     #seleccionar-ataque {
-        margin-top: 3vh;
+        margin-top: 1vh;
+    }
+
+    .selectores, .botones-ataques {
+        display: block;
+        text-align: center;
+        margin: 0px;
+    }
+
+    .boton-ataque {
+        margin: 3px;
     }
 
     #mensajes {
@@ -279,8 +298,9 @@ input:checked + label {
     }
 
     .informacion {
-        width: 235px;
-        padding-left: 25px;
-        gap: 23px;
+        grid-template-columns: 130px 130px;
+        width: 265px;
+        gap: 7px;
+        margin: 5px;
     }
 }
