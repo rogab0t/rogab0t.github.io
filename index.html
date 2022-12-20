@@ -1,72 +1,69 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8" />
+<!DOCTYPE html> 
+<html lang="es"> 
+    <head> 
+        <meta charset="UTF-8"> 
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>FIERCEWars</title>
-        <link rel="stylesheet" href="./styles.css" />
+        <title>Las bayas</title> 
+        <link rel="stylesheet" href="./css/style.css"> 
+        <link rel="icon" href="./images/icon.png">
     </head>
-    <body>
-        <section id="seleccionar-mascota">
-            <!--Cubisaurio -> Agua 
-            Pennysaurio -> Tierra
-            Wilsonsaurio -> Fuego-->
-            <h1 class="titulo-img"><img src="./assets/logo_fiercewars.png" alt="logo"></h1>
-            <h2 class="subtitulo">Elige a tu Mascota:</h2>
-            
-            <div id="contenedor-selectores" class="selectores"> 
-            
-            </div>
-            
-            <button id="boton-seleccionarmascota">Seleccionar</button>
+    <body> 
+        <header class="header" id="header"> 
+            <nav class="nav">
+                <ul class="nav_list"> 
+                    <a href="#header"><img src="./images/logo.png" class="nav_icon" alt="logo de bayas"></a>
+                    <li class="nav_item">
+                        <a href="#frutos-rojos" class="nav_link">Frutos rojos</a> 
+                    </li>
+                    <li class="nav_item"> 
+                        <a href="#propiedades" class="nav_link">Propiedades</a>
+                    </li>
+                    <li class="nav_item">
+                        <a href="#contact" class="nav_link">Contacto</a> 
+                    </li>
+                </ul>
+            </nav>
+
+            <main class="main">
+                <h1 class="main_title">Las bayas</h1>
+                <h2 class="main_subtitle">y sus propiedades</h2>
+                <h2 class="main_subtitle third_title">baja para continuar</h2>
+            </main>
+        </header>
+
+        <section class="frutos_rojos" id="frutos-rojos">
+            <figure class="imagen_frutos1">
+                <img src="./images/frutos1.png" class="imagen1_frutos" alt="foto de frutos rojos">
+                <figcaption class="image_description">
+                    <p><h2 class="frutos_subtitle">Frutos rojos</h2></p>
+                    <p class="frutos_description">Las frutas del bosque, frutos "rojos", o bayas silvestres son pequeñas frutas comestibles correspondiente a bayas, drupas o similares, que antiguamente no se cultivaban; y que se desarrollan generalmente en arbustos o en pequeños árboles que crecen y/o crecían de forma silvestres y/o asilvestrados.</p>
+                </figcaption>
+            </figure>
+            <figure class="imagen_frutos2">
+                <div class="rectangle">hola</div>
+                <img src="./images/frutos2.png" class="imagen2_frutos" alt="foto de frutos rojos">
+            </figure>
         </section>
 
-        <section id="ver-mapa">
-            <h1 class="titulo-img"><img src="./assets/logo_fiercewars.png" alt="logo"></h1>
-            <h2 class="subtitulo">¡Recorre el mapa con tu mascota!</h2>
-            <canvas id="mapa"> </canvas>
-            <button id="boton-arriba" ontouchend="detenerMovimiento()" onmouseup="detenerMovimiento()" ontouchstart="moverArriba()" onmousedown="moverArriba()">Arriba</button>
-            <div>
-                <button class="botones-movimiento" ontouchend="detenerMovimiento()" onmouseup="detenerMovimiento()" ontouchstart="moverIzquierda()" onmousedown="moverIzquierda()">Izquierda</button> 
-                <button class="botones-movimiento" ontouchend="detenerMovimiento()"onmouseup="detenerMovimiento()" ontouchstart="moverAbajo()" onmousedown="moverAbajo()">Abajo</button>
-                <button class="botones-movimiento" ontouchend="detenerMovimiento()" onmouseup="detenerMovimiento()" ontouchstart="moverDerecha()" onmousedown="moverDerecha()">Derecha</button>
-            </div>
+        <section class="propiedades" id="propiedades">
+            <figure class="imagen_panfrutos">
+                <img src="./images/panconfrutos.png" class="panfrutos_imagen" alt="pan con frutos rojos">
+                <figcaption class="image_description2">
+                    <h2 class="panfrutos_subtitle">Propiedades</h2>
+                    <p class="panfrutos_description">Los frutos rojos poseen polifenoles, unos compuestos bioactivos que, en contacto con las bacterias intestinales dan lugar a metabolitos con gran capacidad antioxidante. Por tanto, contribuyen a la prevención de enfermedades crónicas como la diabetes y neurodegenerativas como el Alzheimer.</p>
+                </figcaption>
+            </figure>
         </section>
-        
-        <section id="seleccionar-ataque">
-            <h1 class="titulo-img"><img src="./assets/logo_fiercewars.png" alt="logo"></h1> 
-            
-            <h2 class="subtitulo">Elige tu secuencia de ataques:</h2>
-            
-            <div id="contenedor-ataques" class="botones-ataques">
-            
-            </div>
-            
-            <div id="mensajes">
-                <p id="resultado">¡Mucha suerte!</p>
-                
-                <section id="reiniciar">
-                    <button id="boton-reiniciar">Reiniciar</button>
-                </section>
-            </div>
-            
-            <div class="informacion">
-                <div class="info-jugador">
-                    <p id="nombremascotajugador"></p>
-                    <p id="victorias">VICTORIAS:</p>
-                    <p id="victoriasmascotajugador">0</p>
-                    <div id="ataque-jugador"></div>
-                </div>
 
-                <div class="info-enemigo">
-                    <p id="nombremascotaenemigo"></p>
-                    <p id="victorias">VICTORIAS:</p>
-                    <p id="victoriasmascotaenemigo">0</p>
-                    
-                    <div id="ataque-enemigo"></div>
+        <footer class="contact" id="contact">
+            <div class="information">
+                <h2 class="contact_subtitle">Contacto</h2>
+                <div class="contact_info">
+                    <p class="name">Rodrigo Grau Moreno / grau.gau99@gmail.com</p>
+                    <p>r0gabot &copy; 2022</p>
                 </div>
             </div>
-        </section>
-        <script src="./js/fiercewars.js"></script>
+        </footer>
     </body>
 </html>
