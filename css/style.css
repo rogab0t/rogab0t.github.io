@@ -21,6 +21,7 @@ header {
     background-size: 184vh;
     background-position: center;
     height: 100vh;
+    width: 184vh;
 }
 
 .nav {
@@ -94,6 +95,7 @@ header {
     background-size: 100vh;
     background-position: center;
     height: 100vh;
+    width: 184vh;
     padding: 8vh 11vh;
 }
 
@@ -193,6 +195,7 @@ header {
 
 .contact {
     height: 28vh;
+    width: 184vh;
     background-color: #F2F2F2;
 }
 
@@ -225,6 +228,9 @@ header {
     color: #6C6C6C;
 }
 
+
+/*media 425px*/
+/*
 @media (max-device-width: 425px) {
 
     .header {
@@ -358,12 +364,14 @@ header {
     }
 }
 
+/*media 375px*/
+/*
 @media (max-device-width: 375px) {
 
     .header {
-        background-size: 356vh;
-        height: 327vh;
-        width: 184vh;
+        background-size: 640vh;
+        height: 400vh;
+        width: 225vh;
     }
 
     .nav {
@@ -624,4 +632,4 @@ header {
     .contact_info {
         font-size: 3rem;
     }
-}
+} */
