@@ -354,7 +354,7 @@ header {
 
     .header {
         background-size: 356%;
-        height: 320vh;
+        height: 327vh;
         width: 159vh;
     }
 
@@ -364,7 +364,7 @@ header {
 
     .nav_list {
         gap: 60px;
-        width: 85%;
+        width: 86%;
         padding-top: 120px;
         margin-left: 10%;
         margin-right: 0%;
@@ -402,7 +402,7 @@ header {
     .frutos_rojos {
         flex-direction: column;
         height: 480vh;
-        width: 319%;
+        width: 327%;
         padding: 0;
     }
 
@@ -438,10 +438,11 @@ header {
 
     .imagen2_frutos {
         width: 100%;
+        margin: 2% 0;
     }
 
     .propiedades {
-        height: 220vh;
+        height: 235vh;
         width: 159vh;
     }
 
@@ -452,8 +453,8 @@ header {
     .image_description2 {
         align-items: baseline;
         gap: 45px;
-        width: 266%;
-        padding: 0 10%;
+        width: 280%;
+        padding: 0 29%;
     }
 
     .panfrutos_subtitle {
