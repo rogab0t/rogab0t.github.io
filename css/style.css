@@ -2,7 +2,7 @@
 
 * {
     box-sizing: border-box;
-    margin: 0;
+    margin: 0%;
 }
 
 body {
@@ -18,35 +18,34 @@ header {
 .header {
     position: relative;
     background-image: linear-gradient(#6823AD38, #FF6B1747), url(../images/background.png);
-    background-size: 184vh;
+    background-size: 100vw;
     background-position: center;
     height: 100vh;
-    width: 184vh;
+    width: 100vw;
 }
 
 .nav {
-    width: 173vh;
-    height: 18vh;
-    margin-left: 5vh;
-    margin-right: 5vh;
+    width: 92vw;
+    height: 20vh;
+    margin: 0% 4%;
 }
 
 .nav_list {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    gap: 30px;
-    width: 173vh;
+    gap: 31px;
+    width: 92vw;
+    height: 20vh;
     padding-inline-start: 0px;
-    padding-top: 7vh;
-    margin-left: 0vh;
-    margin-right: 0vh;
+    padding: 2% 0%;
+    margin: 0% 0%;
     list-style: none;
 }
 
 .nav_icon {
-    width: 6vh;
-    margin-right: 106vh;
+    width: 4vw;
+    margin-right: 56vw;
 }
 
 .nav_link {
@@ -57,9 +56,14 @@ header {
 }
 
 .main {
-    width: 164vh;
-    margin: 0 10vh;
-    padding-top: 17vh;
+    width: 100vw;
+    height: 80vh;
+    margin: 0 0%;
+    padding: 2%;
+}
+
+.principal_text {
+    padding: 5% 0%;
 }
 
 .main_title {
@@ -68,7 +72,8 @@ header {
     font-weight: 700;
     text-align: center;
     text-transform: uppercase;
-    height: 16vh;
+    height: 15vh;
+    width: 96vw;
 }
 
 .main_subtitle {
@@ -82,38 +87,38 @@ header {
 .third_title {
     font-family: 'Raleway';
     font-size: 1rem;
-    padding-top: 32vh;
+    padding-top: 15%;
 }
 
 /*section frutos rojos*/
 
 .frutos_rojos {
-    display: flex;
-    gap: 18vh;
+    height: 100vh;
+    width: 100vw;
+    padding: 5% 5%;
     position: relative;
+    background-position: center;
     background-color: #F2F2F2;
     background-size: 100vh;
-    background-position: center;
-    height: 100vh;
-    width: 184vh;
-    padding: 8vh 11vh;
+    display: flex;
+    gap: 11%;
 }
 
 .imagen_frutos1 {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
 }
 
 .imagen1_frutos {
-    width: 47vh;
+    width: 26vw;
 }
 
-.image_description {
+.image_description {width: 36vw;
+    height: 34vh;
     display: flex;
     flex-direction: column;
     gap: 15px;
-    width: 60vh;
 }
 
 .frutos_subtitle {
@@ -135,19 +140,18 @@ header {
 }
 
 .rectangle {
+    width: 55%;
+    height: 43%;
+    left: 45%;
+    bottom: 0%;
+    position: absolute;
     background-color: #6823AD;
     color: #6823AD;
     opacity: 14%;
-    width: 108vh;
-    left: 76vh;
-    bottom: 0vh;
-    height: 44vh;
-    vertical-align: middle;
-    position: absolute;
 }
 
 .imagen2_frutos {
-    width: 84vh;
+    width: 44%;
     position: absolute;
 }
 
@@ -155,23 +159,24 @@ header {
 
 .propiedades {
     height: 100vh;
+    width: 100vw;
 }
 
 .panfrutos_imagen {
     position: relative;
-    width: 184vh;
-    padding: 5vh 0;
+    width: 100vw;
+    padding: 3% 0%;
 }
 
 .image_description2 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: 5px;
     position: absolute;
-    width: 110vh;
-    height: 25vh;
-    left: 37vh;
+    width: 60vw;
+    height: 24vh;
+    left: 20%;
 }
 
 .panfrutos_subtitle {
@@ -194,8 +199,8 @@ header {
 /*section contact*/
 
 .contact {
-    height: 28vh;
-    width: 184vh;
+    height: 20vh;
+    width: 100vw;
     background-color: #F2F2F2;
 }
 
@@ -204,7 +209,7 @@ header {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 6vh 0;
+    padding: 1% 0%;
     gap: 10px;
 }
 
