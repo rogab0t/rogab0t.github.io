@@ -252,15 +252,15 @@ header {
     }
     
     .principal_text {
-        padding: 20% 0%;
+        padding: 5% 0%;
     }
     
     .main_title {
-        height: 25vh;
+        height: 30vh;
     }
     
     .third_title {
-        padding-top: 35%;
+        padding-top: 45%;
     }
     
     /*section frutos rojos*/
@@ -274,13 +274,13 @@ header {
         width: 90vw;
     }
     
-    .image_description {width: 36vw;
+    .image_description {
         width: 90vw;
         height: 30vh;
     }
     
     .frutos_description {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         line-height: 33px;
     }
     
@@ -310,7 +310,7 @@ header {
     }
     
     .panfrutos_description {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         line-height: 50px;
     }
     
