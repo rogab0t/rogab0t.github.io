@@ -136,7 +136,7 @@ header {
     font-style: normal;
     font-weight: 400;
     font-size: 1rem;
-    line-height: 28px;
+    line-height: 33px;
 }
 
 .rectangle {
@@ -192,7 +192,7 @@ header {
     font-style: normal;
     font-weight: 400;
     font-size: 1rem;
-    line-height: 30px;
+    line-height: 33px;
     text-align: center;
 }
 
@@ -266,7 +266,7 @@ header {
     /*section frutos rojos*/
     
     .frutos_rojos {
-        height: 143vh;
+        height: 145vh;
         flex-direction: column;
         gap: 0px;
     }
@@ -319,7 +319,7 @@ header {
     
     .panfrutos_description {
         font-size: 1.3rem;
-        line-height: 45px;
+        line-height: 33px;
     }
     
     /*section contact*/
@@ -415,7 +415,7 @@ header {
     
     .panfrutos_description {
         font-size: 1.3rem;
-        line-height: 50px;
+        line-height: 33px;
     }
     
     /*section contact*/
