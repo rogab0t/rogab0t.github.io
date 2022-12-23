@@ -252,16 +252,9 @@ header {
     }
     
     .nav_list {
-        gap: 20px;
+        gap: 15px;
         width: 94vw;
-        padding-left: 17%;
-    }
-    
-    .icon {
-        width: 11%;
-        position: fixed;
-        left: 1vh;
-        top: 7vh;
+        padding-left: 20%;
     }
 
     .main {
@@ -278,6 +271,7 @@ header {
     .main_title {
         height: 26vh;
         line-height: 115px;
+        width: 100vw;
     }
     
     .third_title {
@@ -353,6 +347,13 @@ header {
     .information {
         padding: 4% 0%;
         gap: 4px;
+    }
+
+    .icon {
+        width: 11%;
+        position: fixed;
+        left: 2vh;
+        top: 7vh;
     }
 }
 
