@@ -252,14 +252,11 @@ header {
         gap: 20px;
         width: 96vw;
     }
-
-    .nav_icon {
-        display: none;
-    }
     
     .icon {
-        width: 0vw;
+        width: 8vw;
         margin-right: 0vw;
+        margin-left: 5vw;
     }
 
     .main {
