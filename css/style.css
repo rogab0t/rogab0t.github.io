@@ -43,14 +43,6 @@ header {
     list-style: none;
 }
 
-.icon {
-    width: 3vw;
-    margin-right: 62vw;
-    position: fixed;
-    left: 3vh;
-    top: 7vh;
-}
-
 .nav_link {
     text-transform: uppercase;
     text-decoration: none;
@@ -234,6 +226,14 @@ header {
 
 .name {
     color: #6C6C6C;
+}
+
+.icon {
+    width: 3vw;
+    margin-right: 62vw;
+    position: fixed;
+    left: 3vh;
+    top: 7vh;
 }
 
 
