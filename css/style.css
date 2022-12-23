@@ -270,8 +270,12 @@ header {
         flex-direction: column;
     }
     
+    .imagen_frutos1 {
+        align-items: center;
+    }
+
     .imagen1_frutos {
-        width: 90vw;
+        width: 80vw;
     }
     
     .image_description {
@@ -321,7 +325,7 @@ header {
     }
     
     .information {
-        padding: 7% 0%;
+        padding: 5% 0%;
         gap: 4px;
     }
 }
