@@ -241,13 +241,20 @@ header {
     .header {
         background-size: 355vw;
     }
+
+    .nav {
+        width: 100vw;
+        height: 20vh;
+        margin: 0% 0%;
+    }
     
     .nav_list {
         gap: 20px;
+        width: 93vw;
     }
     
     .nav_icon {
-        width: 10vw;
+        width: 0vw;
         margin-right: 0vw;
     }
 
