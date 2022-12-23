@@ -266,7 +266,7 @@ header {
     /*section frutos rojos*/
     
     .frutos_rojos {
-        height: 140vh;
+        height: 143vh;
         flex-direction: column;
         gap: 0px;
     }
@@ -292,7 +292,7 @@ header {
     
     .rectangle {
         width: 100%;
-        height: 4%;
+        height: 5%;
         left: 0%;
         bottom: 0%;
     }
