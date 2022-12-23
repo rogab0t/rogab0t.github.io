@@ -45,7 +45,10 @@ header {
 
 .icon {
     width: 3vw;
-    margin-right: 58vw;
+    margin-right: 62vw;
+    position: fixed;
+    left: 3vh;
+    top: 7vh;
 }
 
 .nav_link {
@@ -250,13 +253,15 @@ header {
     
     .nav_list {
         gap: 20px;
-        width: 96vw;
+        width: 94vw;
+        padding-left: 17%;
     }
     
     .icon {
-        width: 60%;
-        margin-right: 0vw;
-        margin-left: 5vw;
+        width: 11%;
+        position: fixed;
+        left: 1vh;
+        top: 7vh;
     }
 
     .main {
