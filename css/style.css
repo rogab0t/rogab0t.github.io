@@ -250,17 +250,25 @@ header {
         width: 10vw;
         margin-right: 0vw;
     }
+
+    .main {
+        width: 100vw;
+        height: 80vh;
+        margin: 0 0%;
+        padding: 15% 0%;
+    }
     
     .principal_text {
         padding: 0% 0%;
     }
     
     .main_title {
-        height: 33vh;
+        height: 26vh;
+        line-height: 115px;
     }
     
     .third_title {
-        padding-top: 43%;
+        padding-top: 48%;
     }
     
     /*section frutos rojos*/
