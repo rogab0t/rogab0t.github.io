@@ -282,7 +282,8 @@ header {
     
     .image_description {
         width: 90vw;
-        height: 41vh;
+        height: 43vh;
+        gap: 10px;
     }
     
     .frutos_description {
