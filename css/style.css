@@ -25,9 +25,12 @@ header {
 }
 
 .nav {
-    width: 92vw;
-    height: 20vh;
-    margin: 0% 4%;
+    width: 100vw;
+    height: 10vh;
+    margin: 0% 0%;
+    position: fixed;
+    top: 0vh;
+    background-color: #49291142;
 }
 
 .nav_list {
@@ -35,12 +38,17 @@ header {
     justify-content: flex-end;
     align-items: center;
     gap: 25px;
-    width: 92vw;
-    height: 20vh;
+    width: 100vw;
+    height: 10vh;
     padding-inline-start: 0px;
-    padding: 2% 0%;
+    padding: 0% 4%;
     margin: 0% 0%;
     list-style: none;
+}
+
+.icon {
+    width: 3vw;
+    margin-right: 58vw;
 }
 
 .nav_link {
@@ -52,13 +60,13 @@ header {
 
 .main {
     width: 100vw;
-    height: 80vh;
+    height: 100vh;
     margin: 0 0%;
     padding: 2%;
 }
 
 .principal_text {
-    padding: 5% 0%;
+    padding: 15% 0%;
 }
 
 .main_title {
@@ -82,7 +90,7 @@ header {
 .third_title {
     font-family: 'Raleway';
     font-size: 1rem;
-    padding-top: 15%;
+    padding-top: 3%;
 }
 
 /*section frutos rojos*/
@@ -228,14 +236,6 @@ header {
     color: #6C6C6C;
 }
 
-.icon {
-    width: 3vw;
-    margin-right: 62vw;
-    position: fixed;
-    left: 3vh;
-    top: 7vh;
-}
-
 
 /*media 425px*/
 
@@ -247,35 +247,44 @@ header {
 
     .nav {
         width: 100vw;
-        height: 20vh;
+        height: 10vh;
         margin: 0% 0%;
+        position: fixed;
+        top: 0vh;
+        background-color: #49291142;
     }
     
     .nav_list {
-        gap: 15px;
-        width: 94vw;
-        padding-left: 20%;
+        gap: 14px;
+        padding: 0% 4%;
+    }
+    
+    .icon {
+        width: 7vw;
+        margin: 0vw 3vw;
     }
 
     .main {
         width: 100vw;
-        height: 80vh;
+        height: 100vh;
         margin: 0 0%;
-        padding: 15% 0%;
+        padding: 2%;
     }
     
     .principal_text {
-        padding: 0% 0%;
+        padding: 45% 0%;
     }
     
     .main_title {
         height: 26vh;
         line-height: 115px;
-        width: 100vw;
+        width: 98vw;
     }
     
     .third_title {
-        padding-top: 40%;
+        font-family: 'Raleway';
+        font-size: 1rem;
+        padding-top: 3%;
     }
     
     /*section frutos rojos*/
@@ -347,13 +356,6 @@ header {
     .information {
         padding: 4% 0%;
         gap: 4px;
-    }
-
-    .icon {
-        width: 11%;
-        position: fixed;
-        left: 2vh;
-        top: 7vh;
     }
 }
 
