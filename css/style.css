@@ -24,40 +24,6 @@ header {
     width: 100vw;
 }
 
-.nav {
-    width: 100vw;
-    height: 10vh;
-    margin: 0% 0%;
-    position: fixed;
-    top: 0vh;
-    background-color: #49291142;
-}
-
-.nav_list {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 25px;
-    width: 100vw;
-    height: 10vh;
-    padding-inline-start: 0px;
-    padding: 0% 4%;
-    margin: 0% 0%;
-    list-style: none;
-}
-
-.icon {
-    width: 3vw;
-    margin-right: 58vw;
-}
-
-.nav_link {
-    text-transform: uppercase;
-    text-decoration: none;
-    font-weight: 700;
-    color: white;
-}
-
 .main {
     width: 100vw;
     height: 100vh;
@@ -236,6 +202,40 @@ header {
     color: #6C6C6C;
 }
 
+.nav {
+    width: 100vw;
+    height: 10vh;
+    margin: 0% 0%;
+    position: fixed;
+    top: 0vh;
+    background-color: #49291142;
+}
+
+.nav_list {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 25px;
+    width: 100vw;
+    height: 10vh;
+    padding-inline-start: 0px;
+    padding: 0% 4%;
+    margin: 0% 0%;
+    list-style: none;
+}
+
+.icon {
+    width: 3vw;
+    margin-right: 58vw;
+}
+
+.nav_link {
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 700;
+    color: white;
+}
+
 
 /*media 425px*/
 
@@ -243,25 +243,6 @@ header {
 
     .header {
         background-size: 355vw;
-    }
-
-    .nav {
-        width: 100vw;
-        height: 10vh;
-        margin: 0% 0%;
-        position: fixed;
-        top: 0vh;
-        background-color: #49291142;
-    }
-    
-    .nav_list {
-        gap: 14px;
-        padding: 0% 4%;
-    }
-    
-    .icon {
-        width: 7vw;
-        margin: 0vw 3vw;
     }
 
     .main {
@@ -336,9 +317,9 @@ header {
     }
     
     .image_description2 {
-        gap: 30px;
+        gap: 50px;
         width: 90vw;
-        height: 56vh;
+        height: 54vh;
         left: 5%;
     }
     
@@ -356,6 +337,25 @@ header {
     .information {
         padding: 4% 0%;
         gap: 4px;
+    }
+
+    .nav {
+        width: 100vw;
+        height: 10vh;
+        margin: 0% 0%;
+        position: fixed;
+        top: 0vh;
+        background-color: #49291142;
+    }
+    
+    .nav_list {
+        gap: 14px;
+        padding: 0% 4%;
+    }
+    
+    .icon {
+        width: 7vw;
+        margin: 0vw 3vw;
     }
 }
 
