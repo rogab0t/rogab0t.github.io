@@ -364,7 +364,7 @@ header {
 @media (max-device-width: 375px) {
 
     .header {
-        background-size: 330vw;
+        background-size: 350vw;
     }
 
     .principal_text {
