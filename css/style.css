@@ -24,32 +24,32 @@ header {
     width: 100vw;
 }
 
+/*navigation*/
+
 .nav {
     width: 100vw;
-    height: 10vh;
-    margin: 0% 0%;
+    padding: 2% 3%;
+    background-color: #49291142;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
     position: fixed;
     z-index: 1;
-    top: 0vh;
-    background-color: #49291142;
-}
-
-.nav_list {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 25px;
-    width: 100vw;
-    height: 10vh;
-    padding-inline-start: 0px;
-    padding: 0% 4%;
-    margin: 0% 0%;
-    list-style: none;
 }
 
 .icon {
     width: 3vw;
-    margin-right: 58vw;
+}
+
+.nav_list {
+    display: flex;
+    gap: 20px;
+    padding: 0;
+}
+
+.nav_item {
+    list-style: none;
 }
 
 .nav_link {
@@ -58,6 +58,8 @@ header {
     font-weight: 700;
     color: white;
 }
+
+/*main section*/
 
 .main {
     width: 100vw;
