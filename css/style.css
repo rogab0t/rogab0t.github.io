@@ -239,12 +239,15 @@ header {
 }
 
 /*media 425px*/
-
 @media (max-width: 425px) {
+
+    /*section header*/
 
     .header {
         background-size: 355vw;
     }
+
+    /*navigation*/
     
     .nav {
         padding: 5% 3%;
@@ -265,6 +268,8 @@ header {
         padding: 0;
         font-size: 1rem;
     }
+
+    /*main section*/
 
     .main {
         width: 100vw;
@@ -362,12 +367,15 @@ header {
 }
 
 /*media 375px*/
-
 @media (max-width: 375px) {
+
+    /*section header*/
 
     .header {
         background-size: 350vw;
     }
+
+    /*navigation*/
 
     .nav {
         padding: 5% 3%;
@@ -388,6 +396,8 @@ header {
         padding: 0;
         font-size: 1rem;
     }
+
+    /*main section*/
 
     .principal_text {
         padding: 30% 0%;
@@ -459,9 +469,13 @@ header {
 /*media 320px*/
 @media (max-width: 320px) {
 
+    /*section header*/
+
     .header {
         background-size: 280vw;
     }
+
+    /*navigation*/
 
     .nav {
         padding: 5% 3%;
@@ -482,6 +496,8 @@ header {
         padding: 0;
         font-size: 0.8rem;
     }
+
+    /*main section*/
 
     .principal_text {
         padding: 40% 0%;
