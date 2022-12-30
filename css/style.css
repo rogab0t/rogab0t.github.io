@@ -33,7 +33,6 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
     position: fixed;
     z-index: 1;
 }
@@ -248,7 +247,6 @@ header {
     }
     
     .nav {
-        flex-wrap: nowrap;
         padding: 5% 3%;
     }
 
@@ -372,7 +370,6 @@ header {
     }
 
     .nav {
-        flex-wrap: nowrap;
         padding: 5% 3%;
     }
 
@@ -467,7 +464,6 @@ header {
     }
 
     .nav {
-        flex-wrap: nowrap;
         padding: 5% 3%;
     }
 
