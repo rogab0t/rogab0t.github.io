@@ -1,0 +1,540 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto&display=swap'); /*Importacion de familia de fuente, con valor para importarla desde la url del sitio web*/
+
+:root { /*Pseudoclase de declaracion de propiedad personalizada en la raiz del documento HTML*/
+    --secondary-texts: 'Roboto', sans-serif; /*Propiedad personalizada de fuente de letra, con valor de la fuente importada*/
+    --gray: #9DAFBD; /*Propiedad personalizada de color en hexadecimal*/
+    --light-gray: #ECF0FD; /*Propiedad personalizada de color en hexadecimal*/
+    --very--light-gray: #fefeff; /*Propiedad personalizada de color en hexadecimal*/
+    --green: #4CAF50; /*Propiedad personalizada de color en hexadecimal*/
+    --dark-blue: #122250A3; /*Propiedad personalizada de color en hexadecimal*/
+}
+
+* { /*Selector universal para seleccionar a todos los elementos del documento HTML*/
+    box-sizing: border-box; /*Propiedad de comoportamiento de los elementos, con valor para que no se vean afectadas las dimensiones declaradas*/
+    margin: 0; /*Propiedad de margen externo, con valor 0 para no colocar margen*/
+}
+
+body { /*Selector de tipo para el elemento HTML y sus elementos contenidos*/
+    font-family: 'Poppins', sans-serif; /*Propiedad de fuente de letra, con valor de la fuente importada*/
+    font-weight: 600; /*Propiedad de peso de fuente de letra, con valor de negrita*/
+    font-size: 16px; /*Propiedad de tamaña de fuene de letra, con valor de 16 pixeles*/
+}
+
+.container { /*Selector de clase para el elemento HTML que lo posea*/
+    max-width: 1104px; /*Propiedad de ancho maximo, con valor para no superar los 1104 pixeles*/
+    width: 90%; /*Propiedad de ancho, con valor del 90% de su contenedor*/
+    margin: 0 auto; /*Propiedad de margen externo, con valor para centrar horizontalmente*/
+}
+
+/* nav */
+
+.nav { /*Selector de clase para el elemento HTML que lo posea*/
+    width: 100%; /*Propiedad de ancho, con valor del 100% de su contenedor*/
+    background-color: #FFFFFF; /*Propiedad de color del fondo, con valor del color blanco en hexadecimal*/
+    position: fixed; /*Propiedad de posicion del elemento, con valor para ser fijo en el viewport*/
+    z-index: 2; /*Propiedad para indicar el orden de importancia de visualizacion de elmentos apilados, con el valor de 2 para ser el primero en ser visible*/
+    overflow: auto; /*Propiedad de comportamiento de los elementos al desbordar de su contenerdor, con valor para mostrar la barra de desplazamiento solo cuando sea necesario*/
+    scrollbar-width: none; /*Propiedad de ancho de barra de desplazamiento, con valor para no tener ancho*/
+}
+
+.nav::-webkit-scrollbar { /*Selector de clase al cual se le aplica la pseudo clase de estilos de barra de desplazamiento en navegadores de webkit*/
+    display: none; /*Propiedad de comportamiento de visualizacion, con valor para no ser mostrado*/
+}
+
+.nav__container { /*Selector de clase para el elemento HTML que lo posea*/
+    height: auto; /*Propiedad de alto, con valor automatico para que seal del alto que necesite el contenido*/
+    padding: 1.5rem 0; /*Propiedad de margen interno, con valor de 1.5 veces el tamaño de fuente raiz del HTML superior e inferior, y 0 los lados*/
+    display: flex; /*Propiedad de comportamiento de visualizacion, con valor para hacer uso de flexbox*/
+    justify-content: space-between; /*Propiedad para alinear los elementos en el eje principal, con valor para colocalos a las orillas*/
+    align-items: center; /*Propiedad para alinear respecto al eje secundario, con valor para centrar*/
+    gap: 4%; /*Propiedad de espaciado entre elementos, con valor del 4% de su contenedor*/
+}
+
+.nav__link { /*Selector de clase para el elemento HTML que lo posea*/
+    text-decoration: none; /*Propiedad de decoracion del texto, con valor none para no tener decorado*/
+    font-size: 1rem; /*Propiedad de tamaña de fuene de letra, con valor de 1 vez el tamaño de fuente raiz del documento HTML*/
+    color: #000000; /*Propiedad de color del texto, con valor del color negro en hexadecimal*/
+    transition: 0.5s transform; /*Propiedad de transicion, con valor de 0.5 segundos, y para ser aplicado a la propiedad transform*/
+}
+
+.nav__link:hover { /*Selector de clase al cual se le aplica la pseudo clase de enfocar un elemento que posee dicho selector de clase*/
+    transform: scale(1.1) translateY(-5px); /*Propiedad de transformacion, con valor para escalar el elemento en 1.1 veces su tamaño, y transladarlo en el eje "y" -5 pixeles*/
+}
+
+.nav--logo { /*Selector de clase para el elemento HTML que lo posea*/
+    margin-right: auto; /*Propiedad para el margen derecho, con el valor de auto para que el elemento se coloque al extremo opuesto*/
+    font-size: 2rem; /*Propiedad de tamaña de fuene de letra, con valor de 2 veces el tamaño de fuente raiz del documento HTML*/
+    text-decoration: none; /*Propiedad de decoracion del texto, con valor none para no tener decorado*/
+    color: #000000; /*Propiedad de color del texto, con valor del color negro en hexadecimal*/
+}
+
+/* header */
+
+.header { /*Selector de clase para el elemento HTML que lo posea*/
+    background-image: url(../images/header_back.png); /*Propiedad de imagen de fondo, con valor de obtener la imagen desde su ruta*/
+    background-repeat: no-repeat; /*Propiedad de repetir el fondo, con el valor de no repetir el fondo*/
+    background-position: bottom right; /*Propiedad para la posicion de la imagen con el valor para colocarla arriba a la derecha*/
+    background-size: 42%; /*Propiedad para el tamaño del fondo el cual es la imagen, con el valor del 42% de su contenedor*/
+    padding-top: 6rem; /*Propiedad de margen interno superior, con valor de 6 veces el tamaño de fuente raiz del documento HTML*/
+}
+
+.hero__header { /*Selector de clase para el elemento HTML que lo posea*/
+    padding: 3rem 0; /*Propiedad de margen interno, con valor de 3 veces el tamaño de fuente raiz del HTML superior e inferior, y 0 los lados*/
+    display: flex; /*Propiedad de comportamiento de visualizacion, con valor para hacer uso de flexbox*/
+    flex-wrap: wrap; /*Propiedad de nuevas lineas por elementos desbordados, con valor para crear nuevas lineas*/
+    justify-content: space-between; /*Propiedad para alinear a los elementos en el eje principal, con valor para distribuirlo equitativamente pegados al inicio y final del eje*/
+    gap: 2rem; /*Propiedad de espaciado entre elementos, con valor de 2 veces el tamaño de fuente del padre*/
+}
+
+.hero__texts { /*Selector de clase para el elemento HTML que lo posea*/
+    max-width: 535px; /*Propiedad de ancho maximo, con valor para no superar los 535 pixeles*/
+    display: flex; /*Propiedad de comportamiento de visualizacion, con valor para hacer uso de flexbox*/
+    flex-direction: column; /*Propiedad de direccion de los flex-items, con valor para que sea en columna*/
+    justify-content: flex-start; /*Propiedad para alinear a los elementos en el eje principal, con valor para colocarlos al inicio del eje*/
+
+}
+
+.paragraph__1 { /*Selector de clase para el elemento HTML que lo posea*/
+    font-size: 1rem; /*Propiedad de tamaña de fuene de letra, con valor de 1 vez el tamaño de fuente raiz del documento HTML*/
+    font-weight: 400; /*Propiedad de peso de fuente de letra, con valor de regular*/
+}
+
+.paragraph__1::before { /*Selector de clase al cual se le aplica el pseudo elemento que se colocara antes del elemento de dicho selector de clase*/
+    content: ""; /*Propiedad de contenido, con valor de contenido vacio*/
+    width: 10px; /*Propiedad de ancho, con valor de 10 pixeles*/
+    height: 10px; /*Propiedad de alto, con valor de 10 pixeles*/
+    display: inline-block; /*Propiedad de comportamiento de visualizacion, con valor para ser un elemento de linea y bloque*/
+    border-radius: 50%; /*Propiedad de redondeo de esquinas, con valor del 50% para crear un circulo*/
+    background-color: #00F07D; /*Propiedad de color del fondo, con valor de color en hexadecimal*/
+    margin-right: 5px; /*Propiedad para el margen derecho, con el valor de 5 pixeles*/
+}
+
+.paragraph__2 { /*Selector de clase para el elemento HTML que lo posea*/
+    font-size: 2.5rem; /*Propiedad de tamaña de fuene de letra, con valor de 2.5 veces el tamaño de fuente raiz del documento HTML*/
+    font-weight: 600; /*Propiedad de peso de fuente de letra, con valor de negrita*/
+}
+
+.different { /*Selector de clase para el elemento HTML que lo posea*/
+    color: #ff69b4; /*Propiedad de color del texto, con valor de color en hexadecimal*/
+}
+
+.paragraph__3 { /*Selector de clase para el elemento HTML que lo posea*/
+    padding-top: .5rem; /*Propiedad de margen interno superior, con valor de .5 veces el tamaño de fuente raiz del docdumento HTML*/
+    font-weight: 400; /*Propiedad de peso de fuente de letra, con valor de regular*/
+    font-size: 1.1rem; /*Propiedad de tamaña de fuene de letra, con valor de 1.1 veces el tamaño de fuente raiz del documento HTML*/
+}
+
+.hero__picture { /*Selector de clase para el elemento HTML que lo posea*/
+    display: block; /*Propiedad de comportamiento de visualizacion, con valor para ser un elemento de bloque*/
+    max-width: 340px; /*Propiedad de ancho maximo, con valor para no superar los 340 pixeles*/
+    max-height: 340px; /*Propiedad de alto maximo, con valor para no superar los 340 pixeles*/
+    margin-left: auto; /*Propiedad para el margen izquierdo, con el valor de auto para que el elemento se coloque al extremo opuesto*/
+    overflow: hidden; /*Propiedad para la visibilidad del contenido dentro de un elemento, con el valor para mostrarlo hasta el final del contenedor sin desbordar el contenido*/
+    scrollbar-width: none; /*Propiedad de ancho de barra de desplazamiento, con valor para no tener ancho*/
+}
+
+.hero__picture::-webkit-scrollbar { /*Selector de clase al cual se le aplica la pseudo clase de estilos de barra de desplazamiento en navegadores de webkit*/
+    display: none; /*Propiedad de comportamiento de visualizacion, con valor para no ser mostrado*/
+}
+
+.my__picture { /*Selector de clase para el elemento HTML que lo posea*/
+    display: block; /*Propiedad de comportamiento de visualizción del elemento, con valor para ser un elemento de bloque*/
+    width: 100%; /*Propiedad de ancho, con valor del 100% de su contenedor*/
+    min-width: 320px; /*ropiedad de ancho minimo, con valor para no disminuir los 320 pixeles*/
+    height: 140%; /*Propiedad de alto, con valor del 140% de su contenedor*/
+    min-height: 320px; /*Propiedad de alto minimo, con valor para no disminuir los 320 pixeles*/
+    object-fit: cover; /*Propiedad para redimensonar un elemento dentro de su contenedor, con el valor para que el elemeto mantenga su relacion de aspecto siendo recortado*/
+}
+
+/* projects */
+
+.projects { /*Selector de clase para el elemento HTML que lo posea*/
+    overflow: auto; /*Propiedad de comportamiento de los elementos al desbordar de su contenerdor, con valor para mostrar la barra de desplazamiento solo cuando sea necesario*/
+    scrollbar-width: none; /*Propiedad de ancho de barra de desplazamiento, con valor para no tener ancho*/
+    display: grid; /*Propiedad de comportamiento de visualizacion del elemento, con valor para hacer uso de grid*/
+    align-content: center; /*Propiedad para alinear al grid-container horizontalmente, con valor para centrarlo*/
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); /*Propiedad para crear columnas de grid, con valor para que sean dinamicas utilizando la funcion para repetir, con los parametros de ajuste automatico, y la funcion para el tamaño de las columnas con un minimo y un maximo de tamaño*/
+    grid-auto-rows: 320px; /*Propiedad para crear filas automaticas, con valor de 320 pixeles como tamaño minimo*/
+    transition: 1s background-color; /*Propiedad de transicion, con valor de 1 segundo, y para ser aplicado a la propiedad background-color*/
+    background-image: linear-gradient(to right, #FFFFFF, var(--light-gray));
+}
+
+.projects::-webkit-scrollbar { /*Selector de clase al cual se le aplica la pseudo clase de estilos de barra de desplazamiento en navegadores de webkit*/
+    display: none; /*Propiedad de comportamiento de visualizacion, con valor para no ser mostrado*/
+}
+
+.projects:hover { /*Selector de clase al cual se le aplica la pseudo clase de enfocar un elemento que posee dicho selector de clase*/
+    background-color: #ebf0ff; /*Propiedad de color de fondo, con valor de color en haxadecimal*/
+}
+
+.gallery__img { /*Selector de clase para el elemento HTML que lo posea*/
+    width: 100%; /*Propiedad de ancho, con valor del 100% de su contenedor*/
+    height: 100%; /*Propiedad de alto, con valor del 100% de su contenedor*/
+    background-size: cover; /*Propiedad para el tamaño del fondo el cual es la imagen, con el valor para para conservar sus dimensiones sin distorcionarse*/
+    background-position: center; /*Propiedad para la posicion de la imagen con el valor para colocarla centrada*/
+    color: transparent; /*Propiedad de color del texto, con valor transparente para no ser mostrado*/
+    transition: 0.5s transform; /*Propiedad de transicion, con valor de 0.5 segundos, y para ser aplicado a la propiedad transform*/
+}
+
+.gallery__img:hover { /*Selector de clase al cual se le aplica la pseudo clase de enfocar un elemento que posee dicho selector de clase*/
+    transform: scale(0.96); /*Propiedad de transformacion, con valor para escalar el elemento en 0.96 veces su tamaño*/
+}
+
+.gallery__img--1 { /*Selector de clase modificador para el elemento HTML que lo posea*/
+    background-image: url(../images/proyecto-1-01.png); /*Propiedad de imagen de fondo, con valor de obtener la imagen desde su ruta*/
+}
+
+.gallery__img--2 { /*Selector de clase modificador para el elemento HTML que lo posea*/
+    background-image: url(../images/proyecto-2-01.png); /*Propiedad de imagen de fondo, con valor de obtener la imagen desde su ruta*/
+}
+
+.gallery__img--3 { /*Selector de clase modificador para el elemento HTML que lo posea*/
+    background-image: url(../images/proyecto-3-01.png); /*Propiedad de imagen de fondo, con valor de obtener la imagen desde su ruta*/
+}
+
+.gallery__img--4 { /*Selector de clase modificador para el elemento HTML que lo posea*/
+    background-image: url(../images/proyecto-4-01.png); /*Propiedad de imagen de fondo, con valor de obtener la imagen desde su ruta*/
+}
+
+.gallery__img--5 { /*Selector de clase modificador para el elemento HTML que lo posea*/
+    background-image: url(../images/proyecto-5-01.png); /*Propiedad de imagen de fondo, con valor de obtener la imagen desde su ruta*/
+}
+
+.gallery__img--6 { /*Selector de clase modificador para el elemento HTML que lo posea*/
+    background-image: url(../images/proyecto-4-02.png); /*Propiedad de imagen de fondo, con valor de obtener la imagen desde su ruta*/
+}
+
+/* benefits */
+
+.benefits { /*Selector de clase para el elemento HTML que lo posea*/
+    background-image: linear-gradient(to right, #FFFFFF, var(--light-gray)); /*Propiedad para colocar una imagen de fondo, con valor de colocar un gradiente, en direccion a la derecha, con valores de color en hexadecimal y de propiedad personalizada*/
+    background-size: 100%; /*Propiedad para el tamaño del fondo el cual es la imagen, con el valor del 100% de su contenedor*/
+}
+
+.benefits__container { /*Selector de clase para el elemento HTML que lo posea*/
+    padding: 5.4rem 0.3rem; /*Propiedad de margen interno, con valor de 5.4 veces el tamaño de fuente raiz del HTML superior, 0 los lados, y .3 veces el tamaño de fuente raiz del HTML inferior*/
+    text-align: center; /*Propiedad de alineamiento del texto, con valor para centrarlo*/
+    display: flex; /*Propiedad de comportamiento de visualizacion, con valor para hacer uso de flexbox*/
+    flex-direction: column; /*Propiedad de direccion de los flex-items, con valor para que sea en columna*/
+    align-items: center; /*Propiedad para alinear respecto al eje secundario, con valor para centrar*/
+    gap: 3rem; /*Propiedad de espaciado entre elementos, con valor de 3 veces el tamaño de fuente del padre*/
+}
+
+.texts__container { /*Selector de clase para el elemento HTML que lo posea*/
+    max-width: 687px; /*Propiedad de ancho maximo, con valor para no superar los 687 pixeles*/
+    width: 70%; /*Propiedad de ancho, con valor del 70% de su contenedor*/
+    display: flex; /*Propiedad de comportamiento de visualizacion, con valor para hacer uso de flexbox*/
+    flex-direction: column; /*Propiedad de direccion de los flex-items, con valor para que sea en columna*/
+    gap: 1rem; /*Propiedad de espaciado entre elementos, con valor de 1 vez el tamaño de fuente del padre*/
+}
+
+.benefits__title { /*Selector de clase para el elemento HTML que lo posea*/
+    font-size: 2.3rem; /*Propiedad de tamaña de fuene de letra, con valor de 2.3 veces el tamaño de fuente raiz del documento HTML*/
+    font-weight: 600; /*Propiedad de peso de fuente de letra, con valor de negrita*/
+}
+
+.benefits__description { /*Selector de clase para el elemento HTML que lo posea*/
+    font-family: var(--secondary-texts); /*Propiedad de familia de fuente, con valor de propiedad personalizada*/
+    font-weight: 400; /*Propiedad de peso de fuente de letra, con valor de regular*/
+    font-size: 1.2rem; /*Propiedad de tamaña de fuene de letra, con valor de 1.2 veces el tamaño de fuente raiz del documento HTML*/
+    color: var(--dark-blue); /*Propiedad de color del texto, con valor de propiedad personalizada*/
+}
+
+.benefits__items { /*Selector de clase para el elemento HTML que lo posea*/
+    display: flex; /*Propiedad de comportamiento de visualizacion, con valor para hacer uso de flexbox**/
+    flex-direction: row; /*Propiedad de direccion de los flex-items, con valor para que sea en filas*/
+    flex-wrap: wrap; /*Propiedad de nuevas lineas por elementos desbordados, con valor para crear nuevas lineas*/
+    justify-content: space-between; /*Propiedad para alinear a los elementos en el eje principal, con valor para distribuirlo equitativamente pegados al inicio y final del eje*/
+    gap: 2.5rem; /*Propiedad de espaciado entre elementos, con valor de 2.5 veces el tamaño de fuente del padre*/
+    font-family: var(--secondary-texts); /*Propiedad de familia de fuente, con valor de propiedad personalizada*/
+}
+
+.benefits__item { /*Selector de clase para el elemento HTML que lo posea*/
+    display: flex; /*Propiedad de comportamiento de visualizacion, con valor para hacer uso de flexbox*/
+    flex-direction: column; /*Propiedad de direccion de los flex-items, con valor para que sea en columna*/
+    flex: 1; /*Propiedad de factores de crecimiento, con valor 1 en grow, 1 en shrink , y 0 en basis, para que sean del mismo tamaño*/
+    gap: .8rem; /*Propiedad de espaciado entre elementos, con valor de .8 veces el tamaño de fuente del padre*/
+}
+
+.benefits__icon { /*Selector de clase para el elemento HTML que lo posea*/
+    width: 50px; /*Propiedad de ancho, con valor de 50 pixeles*/
+    outline: 1px solid var(--gray); /*Propiedad de linea en el margen, con el valor de 1 pixel de grosor, solido, de color de una propiedad personalizada*/
+    padding: 7px; /*Propiedad de margen interno, con valor de 7 pixeles para todos los lados*/
+    margin: 0 auto; /*Propiedad de margen externo, con valor para centrar horizontalmente*/
+    margin-bottom: 0.9rem; /*Propiedad de margen externo inferior, con valor de .9 veces el tamaño de fuente raiz del HTML*/
+    border-radius: 50%; /*Propiedad de redondeo de esquinas, con valor del 50% para crear un circulo*/
+    display: block; /*Propiedad de comportamiento de visualizacion, con valor para ser un elemento de bloque*/
+    background-color: var(--very--light-gray); /*Propiedad de color de fondo, con valor de una propiedad personalizada*/
+}
+
+.item__paragraph { /*Selector de clase para el elemento HTML que lo posea*/
+    line-height: 1.5; /*Propiedad de alto entre lineas de texto, con valor de 1.5*/
+    color: var(--dark-blue); /*Propiedad de color del texto, con valor de propiedad personalizada*/
+}
+
+/* quote */
+
+.quote__container { /*Selector de clase para el elemento HTML que lo posea*/
+    max-width: 730px; /*Propiedad de ancho maximo, con valor para no superar los 730 pixeles*/
+    margin: 6rem auto; /*Propiedad de margen externo, con valor de 6 veces el tamaño de fuente raiz del documento HTML superior e inforio, y 0 a los lados*/
+    padding: 0 1rem; /*Propiedad de margen interno, con valor 0 superior e inferior, y 1 vez el tamaño de fuente raiz del HTML a los lados*/
+}
+
+.quote__text { /*Selector de clase para el elemento HTML que lo posea*/
+    font-weight: 400; /*Propiedad de peso de fuente de letra, con valor de regular*/
+    font-size: 2.1rem; /*Propiedad de tamaña de fuene de letra, con valor de 2.1 veces el tamaño de fuente raiz del documento HTML*/
+    text-align: center; /*Propiedad de alineamiento del texto, con valor para centrarlo*/
+    color: var(--green); /*Propiedad de color del texto, con valor de propiedad personalizada*/
+}
+
+.quote__person { /*Selector de clase para el elemento HTML que lo posea*/
+    padding-top: 3.7rem; /*Propiedad de margen interno superior, con valor de 3.7 veces el tamaño de fuente raiz del documento HTML*/
+    display: flex; /*Propiedad de comportamiento de visualizacion, con valor para hacer uso de flexbox*/
+    flex-direction: column; /*Propiedad de direccion de los flex-items, con valor para que sea en columna*/
+    align-items: center; /*Propiedad para alinear respecto al eje secundario, con valor para centrar*/
+}
+
+.person__img { /*Selector de clase para el elemento HTML que lo posea*/
+    display: block; /*Propiedad de comportamiento de visualizacion, con valor para ser un elemento de bloque*/
+    width: 60px; /*Propiedad de ancho, con valor de 60 pixeles*/
+    height: 60px; /*Propiedad de alto, con valor de 60 pixeles*/
+    border-radius: 50%; /*Propiedad de redondeo de esquinas, con valor del 50% para crear un circulo*/
+}
+
+.person__name { /*Selector de clase para el elemento HTML que lo posea*/
+    font-size: 1rem; /*Propiedad de tamaña de fuene de letra, con valor de 1 vez el tamaño de fuente raiz del documento HTML*/
+    font-weight: 700; /*Propiedad de peso de fuente de letra, con valor de extra negrita*/
+    padding-top: 1.2rem; /*Propiedad de margen interno superior, con valor de 1.2 veces el tamaño de fuente raiz del documento HTML*/
+}
+
+.person__proffesion { /*Selector de clase para el elemento HTML que lo posea*/
+    font-weight: 400; /*Propiedad de peso de fuente de letra, con valor de regular*/
+    color: var(--dark-blue); /*Propiedad de color del texto, con valor de propiedad personalizada*/
+}
+
+/* footer */
+
+.footer { /*Selector de clase para el elemento HTML que lo posea*/
+    background-image: linear-gradient(to left, #FFFFFF, var(--light-gray)); /*Propiedad para colocar una imagen de fondo, con valor de colocar un gradiente, en direccion a la izquierda, con valores de color en hexadecimal y de propiedad personalizada*/
+}
+
+.footer__container { /*Selector de clase para el elemento HTML que lo posea*/
+    width: 70%; /*Propiedad de ancho, con valor del 70% de su contenedor*/
+    margin: 0 auto; /*Propiedad de margen externo, con valor para centrar horizontalmente*/
+    padding: 6rem 0; /*Propiedad de margen interno, con valor de 6 veces el tamaño de fuente raiz del HTML superior e inferior, y 0 los lados*/
+    display: flex; /*Propiedad de comportamiento de visualizacion, con valor para hacer uso de flexbox*/
+    flex-wrap: wrap; /*Propiedad de nuevas lineas por elementos desbordados, con valor para crear nuevas lineas*/
+    justify-content: space-between; /*Propiedad para alinear a los elementos en el eje principal, con valor para distribuirlo equitativamente pegados al inicio y final del eje*/
+    gap: 4rem; /*Propiedad de espaciado entre elementos, con valor de 4 veces el tamaño de fuente del padre*/
+}
+
+.form__container { /*Selector de clase para el elemento HTML que lo posea*/
+    display: flex; /*Propiedad de comportamiento de visualización de elementos, con valor para ser flexible con felxbox*/
+    flex-direction: column; /*Propiedad de dirección de los flex-items, con valor para ser en columna*/
+    gap: 20px; /*Propiedad de separació entre los felx-itemscon valor de 20 pixeles*/
+    width: 458px; /*Propiedad de ancho, con valor de 458 pixeles*/
+    max-width: 100%; /*Propiedad de ancho máximo, con valor del 100% de su contenedor*/
+    height: 100%; /*Propiedad de alto con valor del 100% de su contenedor*/
+    padding: 1.8rem; /*Propiedad de margen interno, con valor de 1.8 veces el tamaño de fuente raiz del HTML a todos los lados*/
+    margin: 0 auto; /*Propiedad de margen externo, con valor para centrar horizontalmente*/
+    background-color: #FFFFFF; /*Propiedad de color del fondo, con valor del color blanco en hexadecimal*/
+    box-shadow: 0px 40px 80px rgba(0, 0, 0, 0.1); /*Propiedad de sombra del elemento, con valor de 0 en eje "x", 40 pixeles en eje "y", 80px de difuminado, y de color en valor de rgba*/
+}
+
+.footer__form { /*Selector de clase para el elemento HTML que lo posea*/
+    display: flex; /*Propiedad de comportamiento de visualización de elementos, con valor para ser flexible con felxbox*/
+}
+
+.comments__input { /*Selector de clase para el elemento HTML que lo posea*/
+    width: 100%; /*Propiedad de ancho, con valor del 100% de su contenedor*/
+    display: block; /*Propiedad de comportamiento de visualizacion, con valor para ser un elemento de bloque*/
+    height: 60px; /*Propiedad de alto, con valor de 60 pixeles*/
+    padding: 1rem; /*Propiedad de margen interno, con valor de 1 vez el tamaño de fuente raiz del HTML a todos los lados*/
+    background-color: var(--light-gray); /*Propiedad de color de fondo, con valor de una propiedad personalizada*/
+    border: 1px solid var(--gray); /*Propiedad de borde, con valor de 1 pixel de ancho, solido, y de color de una propiedad personalizada*/
+    font-family: var(--secondary-texts); /*Propiedad de familia de fuente, con valor de propiedad personalizada*/
+    font-weight: 400; /*Propiedad de peso de fuente de letra, con valor de regular*/
+}
+
+.comments__input::placeholder { /*Selector de clase al cual se le aplica el pseudo elemento de texto demostrativo de dicho selector de clase*/
+    color: var(--gray); /*Propiedad de color del texto, con valor de propiedad personalizada*/
+}
+
+.comments__input:focus { /*Selector de clase al cual se le aplica la pseudo clase de enfocar un elemento de dicho selector de clase*/
+    outline: 1px solid var(--gray); /*Propiedad de linea en el margen, con el valor de 1 pixel de grosor, solido, de color de una propiedad personalizada*/
+    font-family: var(--secondary-texts); /*Propiedad de familia de fuente, con valor de propiedad personalizada*/
+}
+
+.comments__list { /*Selector de clase para el elemento HTML que lo posea*/
+    height: auto; /*Propiedad de alto, con valo auto para que sea del alto de su contenido*/
+    max-height: 115px; /*Propiedad de alto máximo, con valor de 115 pixeles*/
+    overflow: scroll; /*Propiedad de comportamiento de los elementos al desbordar de su contenerdor, con valor para mostrar la barra de desplazamiento*/
+    padding: 0; /*Propiedad de margen interno, con valor 0 para no tener margen*/
+    display: flex; /*Propiedad de comportamientode visualización, con valor para ser flexible con flexbox*/
+    flex-direction: column; /*Propiedad de dirección de los flex-items, con valor para ser en columna*/
+    gap: 20px; /*Propiedad de separación entre flex-items, con valor de 20 pixeles*/
+}
+
+.comment__li { /*Selector de clase para el elemento HTML que lo posea*/
+    list-style: none; /*Propiedad de estilo de listas, con valor none para no tener estilo*/
+    padding: 3%; /*Propiedad de margen interno, con valor del 3% de su contendor*/
+    background-color: var(--light-gray); /*Propiedad de color de fondo, con valor de una propiedad personalizada*/
+}
+
+.comment__p { /*Selector de clase para el elemento HTML que lo posea*/
+    word-wrap: break-word; /*Propiedad de ajuste de línea de palabras con valor para hacer un salto de línea para no desbordar el contenido*/
+}
+
+.buttonsComments { /*Selector de clase para el elemento HTML que lo posea*/
+    display: flex; /*Propiedad de comportamientode visualización, con valor para ser flexible con flexbox*/
+    justify-content: flex-end; /*Propiedad para alinear a los elementos en el eje principal, con valor para colocarlos al final del eje*/
+    gap: 1%; /*Propiedad de separación entre flex-items, con valor del 1% de su contenedor*/
+}
+
+.comment__buttons { /*Selector de clase para el elemento HTML que lo posea*/
+    height: 30px; /*Propiedade alto, con valor de 30 pixeles*/
+    width: 60px; /*Propiedade ancho, con valor de 60 pixeles*/
+    border: none; /*Propiedad de borde, con valor none para no tener borde*/
+    color: #FFFFFF; /*Propiedad de color del texto, con valor del color blanco en hexadecimal*/
+    background-color: var(--green); /*Propiedad de color de fondo, con valor de una propiedad personalizada*/
+    box-shadow: 0px 10px 20px rgba(54, 107, 255, 0.2); /*Propiedad de sombra del elemento, con valor de 0 en eje "x", 10 pixeles en eje "y", 20px de difuminado, y de color en valor de rgba*/
+}
+
+.label__message { /*Selector de clase para el elemento HTML que lo posea*/
+    max-width: 100%; /*Propiedad de ancho maximo, con valor de no superar el 100% de su contenedor*/
+    height: 65%; /*Propiedad de alto, con valor del 65% de su contenedor*/
+    padding: 1rem; /*Propiedad de margen interno, con valor de 1 vez el tamaño de fuente raiz del HTML a todos los lados*/
+    color: var(--gray); /*Propiedad de color del texto, con valor de propiedad personalizada*/
+    border: 1px solid var(--light-gray); /*Propiedad de borde, con valor de 1 pixel de ancho, solido, y color de una fuente personalizada*/
+    font-family: var(--secondary-texts); /*Propiedad de familia de fuente, con valor de propiedad personalizada*/
+    font-weight: 400; /*Propiedad de peso de fuente de letra, con valor de regular*/
+    font-size: .7rem; /*Propiedad de tamaña de fuene de letra, con valor de .7 veces el tamaño de fuente raiz del documento HTML*/
+    display: block; /*Propiedad de comportamiento de visualizacion, con valor para ser un elemento de bloque*/
+}
+
+.form__message { /*Selector de clase para el elemento HTML que lo posea*/
+    max-width: 100%; /*Propiedad de ancho maximo, con valor de no superar el 100% de su contenedor*/
+    min-width: 100%; /*Propiedad de ancho minimo, con valor de no superar el 100% de su contenedor*/
+    width: 100%; /*Propiedad de ancho, con valor del 100% de su contenedor*/
+    max-height: 100%; /*Propiedad de alto maximo, con valor de no superar el 100% de su contenedor*/
+    min-height: 100%; /*Propiedad de alto minimo, con valor de no superar el 100% de su contenedor*/
+    height: 100%; /*Propiedad de alto, con valor del 100% de su contenedor*/
+    padding: 0; /*Propiedad de margen interno, con valor 0 para no tener margen interno*/
+    display: block; /*Propiedad de comportamiento de visualizacion, con valor para ser un elemento de bloque*/
+    border: none; /*Propiedad de borde, con valor none para no tener borde*/
+    font-family: var(--secondary-texts); /*Propiedad de familia de fuente, con valor de propiedad personalizada*/
+}
+
+.form__message::placeholder { /*Selector de clase al cual se le aplica el pseudo elemento de texto demostrativo de dicho selector de clase*/
+    color: var(--gray); /*Propiedad de color del texto, con valor de propiedad personalizada*/
+}
+
+.form__message:focus { /*Selector de clase al cual se le aplica la pseudo clase de enfocar un elemento de dicho selector de clase*/
+    outline: 1px solid var(--gray); /*Propiedad de linea en el margen, con el valor de 1 pixel de grosor, solido, de color de una propiedad personalizada*/
+    font-family: var(--secondary-texts); /*Propiedad de familia de fuente, con valor de propiedad personalizada*/
+}
+
+.send { /*Selector de clase para el elemento HTML que lo posea*/
+    height: 60px; /*Propiedad de alto, con valor de 60 pixeles*/
+    width: 120px; /*Propiedad de ancho, con valor de 120 pixeles*/
+    border: none; /*Propiedad de borde, con valor none para no tener borde*/
+    color: #FFFFFF; /*Propiedad de color del texto, con valor del color blanco en hexadecimal*/
+    background-color: var(--green); /*Propiedad de color de fondo, con valor de una propiedad personalizada*/
+    box-shadow: 0px 10px 20px rgba(54, 107, 255, 0.2); /*Propiedad de sombra del elemento, con valor de 0 en eje "x", 10 pixeles en eje "y", 20px de difuminado, y de color en valor de rgba*/
+}
+
+.form__send:hover { /*Selector de clase al cual se le aplica la pseudo clase de enfocar un elemento que posee dicho selector de clase*/
+    outline: 2px solid #7dc5f8 ; /*Propiedad de linea en el margen, con el valor de 1 pixel de grosor, solido, de color blanco en hexadecimal*/
+}
+
+/* photo */
+
+.mostrar__camara { /*Selector de clase para el elemento HTML que lo posea*/
+    display: none; /*Propiedad de comportamiento de visualizacion, con valor para no ser mostrado*/
+}
+
+/* contact */
+
+.contact { /*Selector de clase para el elemento HTML que lo posea*/
+    max-width: 358px; /*Propiedad de ancho maximo, con valor para no superar los 358 pixeles*/
+    margin: 0 auto; /*Propiedad de margen externo, con valor para centrar horizontalmente*/
+    display: flex; /*Propiedad de comportamiento de visualizacion, con valor para hacer uso de flexbox*/
+    flex-direction: column; /*Propiedad de direccion de los flex-items, con valor para que sea en columna*/
+    gap: 1rem; /*Propiedad de espaciado entre elementos, con valor de 1 vez el tamaño de fuente del padre*/
+}
+
+.footer__title { /*Selector de clase para el elemento HTML que lo posea*/
+    font-weight: 600; /*Propiedad de peso de fuente de letra, con valor de negrita*/
+    font-size: 2rem; /*Propiedad de tamaña de fuene de letra, con valor de 2 veces el tamaño de fuente raiz del documento HTML*/
+    color: var(--green); /*Propiedad de color del texto, con valor de propiedad personalizada*/
+}
+
+.paragraph { /*Selector de clase para el elemento HTML que lo posea*/
+    font-weight: 400; /*Propiedad de peso de fuente de letra, con valor de regular*/
+    font-size: 1.1rem; /*Propiedad de tamaña de fuene de letra, con valor de 1.1 veces el tamaño de fuente raiz del documento HTML*/
+    color: var(--dark-blue); /*Propiedad de color del texto, con valor de propiedad personalizada*/
+}
+
+.footer__media { /*Selector de clase para el elemento HTML que lo posea*/
+    display: flex; /*Propiedad de comportamiento de visualizacion, con valor para hacer uso de flexbox*/
+    gap: .4rem; /*Propiedad de espaciado entre elementos, con valor de .4 veces el tamaño de fuente del padre*/
+}
+
+.media__img { /*Selector de clase para el elemento HTML que lo posea*/
+    width: 33px; /*Propiedad de ancho, con valor de 20 pixeles*/
+    transition: 0.5s transform; /*Propiedad de transicion, con valor de 0.5 segundos, y para ser aplicado a la propiedad transform*/
+}
+
+.media__img:hover { /*Selector de clase al cual se le aplica la pseudo clase de enfocar un elemento que posee dicho selector de clase*/
+    transform: scale(1.1) translateY(-5px); /*Propiedad de transformacion, con valor para escalar el elemento en 1.1 veces su tamaño, y transladarlo en el eje "y" -5 pixeles*/
+}
+
+@media (max-width: 425px) { /*Mediaqueri para un maximo de ancho de dispositivo de 425px*/
+    /* photo */
+
+    .mostrar__camara { /*Selector de clase para el elemento HTML que lo posea*/
+        display: inline-block; /*Propiedad de comportamiento de visualizacion, con valor para ser un elemento de linea y bloque*/
+    }
+
+    .camera__container { /*Selector de clase para el elemento HTML que lo posea*/
+        margin: 0 auto; /*Propiedad de margen externo, con valor para centrar horizontalmente*/
+        display: flex; /*Propiedad de comportamiento de visualizacion, con valor para hacer uso de flexbox*/
+        flex-direction: column; /*Propiedad de direccion de los flex-items, con valor para que sea en columna*/ 
+    }
+
+    .mostrar__camara { /*Selector de clase para el elemento HTML que lo posea*/
+        width: 100%; /*Propiedad de ancho, con valor del 100% de su contenedor*/
+    }
+
+    .camara { /*Selector de clase para el elemento HTML que lo posea*/
+        position: relative; /*Propiedad de posicion, con valor relativo*/
+        display: inline-block; /*Propiedad de comportamiento de visualizacion, con valor para ser un elemento de linea y bloque*/
+        width: 70vw; /*Propiedad de ancho, con valor del 70% del ancho visible del viewport*/
+        aspect-ratio: 9/16; /*Propiedad de relación de aspecto, con valores para 9 en eje "x" y 16 en eje "y"*/
+        overflow: hidden; /*Propiedad para la visibilidad del contenido dentro de un elemento, con el valor para mostrarlo hasta el final del contenedor sin dosbordar el contenido*/
+        margin: 0 auto; /*Propiedad de margen externo, con valor para centrar horizontalmente*/
+    }
+
+    #canvas { /*Selector de indentificador para el elemento HTML que lo posea*/
+        z-index: 1; /*Propiedad para indicar el orden de importancia de visualizacion de elmentos apilados, con el valor de 2 para ser el segundo en ser visible*/
+        position: absolute; /*Propiedad de posicion, con valor absoluto*/
+        top: 0; /*Propiedad de posicion superior, con valor en 0 para quedar al inicio superior de su contenedor*/
+        left: 0; /*Propiedad de posicion izquierda, con valor en 0 para quedar al inicio izquierdo de su contenedor*/
+        display: block; /*Propiedad de comportamiento de visualizacion, con valor para ser un elemento de bloque*/
+        background-color: #ffffff; /*Propiedad de color del fondo, con valor del color blanco en hexadecimal*/
+    }
+
+    .buttons { /*Selector de clase para el elemento HTML que lo posea*/
+        display: flex; /*Propiedad de comportamiento de visualizacion, con valor para hacer uso de flexbox*/
+        justify-content: center; /*Propiedad para alinear los elementos en el eje principal, con valor para centrarlos*/
+        width: 100%; /*Propiedad de ancho, con valor del 100% de su contenedor*/
+    }
+
+    .video__source { /*Selector de clase para el elemento HTML que lo posea*/
+        display: none; /*Propiedad de comportamiento de visualizacion, con valor para no ser mostrado*/
+    }
+
+    #boton__foto { /*Selector de indentificador para el elemento HTML que lo posea*/
+        width: 100%; /*Propiedad de ancho, con valor del 100% de su contenedor*/
+    }
+}
