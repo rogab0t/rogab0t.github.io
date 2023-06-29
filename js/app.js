@@ -101,12 +101,13 @@ function editComment(comment, commentLi, buttonEdit, commentsButtons) {
     let newTextInput = document.createElement('input');
     newTextInput.type = "text";
     newTextInput.className = "comments__input";
-
+    newTextInput.value = comment.textContent;
+    
     let buttonFinishEdit = document.createElement("button");
     buttonFinishEdit.className = "comment__buttons";
     buttonFinishEdit.textContent = "Finalizar";
 
-    commentsButtons.insertBefore(buttonFinishEdit, commentsButtons.firstChild)
+    commentsButtons.insertBefore(buttonFinishEdit, commentsButtons.firstChild);
 
     commentLi.insertBefore(newTextInput, commentLi.firstChild);
 
@@ -148,7 +149,7 @@ function createComment(commentValue) {
     commentButtonEdit.addEventListener('click', () => {
         editComment(commentP, commentLi, commentButtonEdit, divButtons);
     });
- }
+}
 
 footerForm.addEventListener('submit', (e) => {
     e.preventDefault();
