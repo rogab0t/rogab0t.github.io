@@ -386,6 +386,7 @@ body { /*Selector de tipo para el elemento HTML y sus elementos contenidos*/
 .comment__p { /*Selector de clase para el elemento HTML que lo posea*/
     margin-right: auto; /*Propiedad para el margen derecho, con el valor de auto para que el elemento se coloque al extremo opuesto*/
     word-wrap: break-word; /*Propiedad de ajuste de línea de palabras con valor para hacer un salto de línea para no desbordar el contenido*/
+    overflow-wrap: anywhere; /*Propiedad de saltos de línea, con valor para colocarlo cuando sea necesario en cualquier lugar*/
 }
 
 .buttonsComments { /*Selector de clase para el elemento HTML que lo posea*/

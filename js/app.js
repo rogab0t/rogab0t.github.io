@@ -133,7 +133,6 @@ function createComment(commentValue) { //Declaración de función para crear un 
     let buttonInteract = document.createElement('img'); //Declaración de variable con valor asignado de, en el documento HTML, crear un elemento de tipo "imagen"
     buttonInteract.classList.add('commentInteract'); //A dicho elemento "imagen" creado, se accede a su lista de clases, y se le aplica el método para añadir, dicha clase dentro de las comillas de los paréntesis
     buttonInteract.src = './images/edit-com.svg'; //A dicho elemento "imagen" creado, se accede a su propiedad de "fuente", y se le asigna como valor de cadena de texto, la ruta obtener dicha imagen
-    buttonInteract.style.marginBottom = "auto"; //A dicho elemento "imagen" creado, se accede a sus estilos, a la propiedad de margen externo inferior, y se le asigna el valor "auto" para que se coloque al extremo opuesto(arriba)
 
     let divButtons = document.createElement('div'); //Declaración de variable con valor asignado de, en el documento HTML, crear un elemento de tipo "contenedor de bloque"
     divButtons.className = "buttonsComments"; //A dicho elemento "contenedor de bloque" creado, se accede a su selector de clase, y se le asigna dicha clase dentro de las comillas
