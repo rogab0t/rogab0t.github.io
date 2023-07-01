@@ -400,7 +400,7 @@ body { /*Selector de tipo para el elemento HTML y sus elementos contenidos*/
     display: flex; /*Propiedad de comportamientode visualización, con valor para ser flexible con flexbox*/
     flex-direction: column; /*Propiedad de dirección de los flex-items, con valor para ser en columna*/
     align-items: flex-end; /*Propiedad para alinear respecto al eje secundario, con valor para colocarlo al final*/
-    justify-content: space-between; /*Propiedad para alinear a los elementos en el eje principal, con valor para distribuirlo equitativamente pegados al inicio y final del eje*/
+    justify-content: flex-start; /*Propiedad para alinear a los elementos en el eje principal, con valor para distribuirlo equitativamente pegados al inicio y final del eje*/
 }
 
 .buttonsComments.show { /*Selector de clase para el elemento HTML que posea el primer selector de clase*/
