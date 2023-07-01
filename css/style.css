@@ -376,19 +376,39 @@ body { /*Selector de tipo para el elemento HTML y sus elementos contenidos*/
 }
 
 .comment__li { /*Selector de clase para el elemento HTML que lo posea*/
+    display: flex; /*Propiedad de comportamientode visualización, con valor para ser flexible con flexbox*/
+    justify-content: flex-end; /*Propiedad para alinear a los elementos en el eje principal, con valor para colocarlos al final del eje*/
     list-style: none; /*Propiedad de estilo de listas, con valor none para no tener estilo*/
     padding: 3%; /*Propiedad de margen interno, con valor del 3% de su contendor*/
     background-color: var(--light-gray); /*Propiedad de color de fondo, con valor de una propiedad personalizada*/
 }
 
 .comment__p { /*Selector de clase para el elemento HTML que lo posea*/
+    margin-right: auto; /*Propiedad para el margen derecho, con el valor de auto para que el elemento se coloque al extremo opuesto*/
     word-wrap: break-word; /*Propiedad de ajuste de línea de palabras con valor para hacer un salto de línea para no desbordar el contenido*/
 }
 
 .buttonsComments { /*Selector de clase para el elemento HTML que lo posea*/
+    display: none; /*Propiedad de comportamientode visualización, con valor para ser flexible con flexbox*/
+    justify-content: center; /*Propiedad para alinear a los elementos en el eje principal, con valor para colocarlos al centro del eje*/
+    align-items: center; /*Propiedad para alinear respecto al eje secundario, con valor para centrar*/
+    gap: 6%; /*Propiedad de separación entre flex-items, con valor del 6% de su contenedor*/
+}
+
+.buttonsContainer { /*Selector de clase para el elemento HTML que lo posea*/
     display: flex; /*Propiedad de comportamientode visualización, con valor para ser flexible con flexbox*/
-    justify-content: flex-end; /*Propiedad para alinear a los elementos en el eje principal, con valor para colocarlos al final del eje*/
-    gap: 1%; /*Propiedad de separación entre flex-items, con valor del 1% de su contenedor*/
+    flex-direction: column; /*Propiedad de dirección de los flex-items, con valor para ser en columna*/
+    align-items: flex-end; /*Propiedad para alinear respecto al eje secundario, con valor para colocarlo al final*/
+    justify-content: space-between; /*Propiedad para alinear a los elementos en el eje principal, con valor para distribuirlo equitativamente pegados al inicio y final del eje*/
+}
+
+.buttonsComments.show { /*Selector de clase para el elemento HTML que posea el primer selector de clase*/
+    display: flex; /*Propiedad de comportamientode visualización, con valor para ser flexible con flexbox*/
+    flex-direction: column; /*Propiedad de dirección de los flex-items, con valor para ser en columna*/
+}
+
+.ocult { /*Selector de clase para el elemento HTML que lo posea*/
+    display: none; /*Propiedad de comportamientode visualización, con valor "none" para no ser visible*/
 }
 
 .comment__buttons { /*Selector de clase para el elemento HTML que lo posea*/
@@ -436,7 +456,7 @@ body { /*Selector de tipo para el elemento HTML y sus elementos contenidos*/
 
 .send { /*Selector de clase para el elemento HTML que lo posea*/
     height: 60px; /*Propiedad de alto, con valor de 60 pixeles*/
-    width: 120px; /*Propiedad de ancho, con valor de 120 pixeles*/
+    width: 50%; /*Propiedad de ancho, con valor del 50% de su contenedor*/
     border: none; /*Propiedad de borde, con valor none para no tener borde*/
     color: #FFFFFF; /*Propiedad de color del texto, con valor del color blanco en hexadecimal*/
     background-color: var(--green); /*Propiedad de color de fondo, con valor de una propiedad personalizada*/
