@@ -172,3 +172,27 @@ footerForm.addEventListener('submit', (e) => { //A dicho elemento obtenido media
 
     e.target.reset(); //Al elemento que ejecutó el evento, el cual es el formulario y el evento es 'submit', se le aplica el método de resetear los valores de los campos del formulario después de que se envía el formulario.
 });
+
+// SCROLL FUNCTION //
+
+let links = document.querySelectorAll(".nav__link"); /*Declaración de variable con valor asignado de, del documento HTML, obtener todos los elementos mediante su selector el cual es el que está dentro de las comillas de los paréntesis*/
+
+function scrollToElement(element) { /*Declaración de función para desplazarse hacia un elemento, la cual posee el parámetro para recibir como argumento el elemento hacia el cual desplazarse, y que ejecuta el siguiente bloque*/
+    window.scrollTo({ /*A la ventana del navegador, se le aplica su método para desplazar suevamente, el cual recibe un JSON(objeto) con las siguientes propiedades*/
+        'behavior': 'smooth', /*Propiedad del objeto para el comportamiento del desplazamiento, con valor para ser "suave"*/
+        'top': element.offsetTop - document.querySelector(".nav__container").offsetHeight /*Propiedad del objeto que especifica la posición vertical del elemento hacia el cual se desplazará en relación con el borde superior de la ventana, con valor de obtener del elemento obtenido como argumento en el parámetro de la función, y su desplazamiento superior, al que se le resta, del documento HTML, obtener un elementos mediante su selector, el cual es el de clase enviado como argumento, así la barra de navegación no se colocará sobre la sección a la que se redirecciona*/
+    });
+}
+
+links.forEach(link => { /*Al al lista/arreglo de los elementos obtenidos mediante su selector, se les aplica un ciclo para iterar cada elemento, lo cual hace que por cada elemento(link/a) se ejeucta el siguiente bloque*/
+    link.addEventListener('click', (ev) => { /*Al elemento, se le agrega un escuchador de eventos, que detecta el evento de 'click' sobre el elemento, ejeuctanto una función flecha que recibe como argumento el evento detectado, ejecutando el siguiente bloque*/
+        if (!!window.scrollTo) { /*Condicional que valida si, la ventana del navegador, posee y puede hacer uso de su método de desplazamiento, utilizando una doble negación para convertir el valor en un valor booleano*/
+            ev.preventDefault(); /*Si se cumple la condición anterior, al evento detectado se le aplica el método para prevenir su acción por defecto el cual es redireccionar "a saltos"*/
+        }
+
+        let paths = ev.currentTarget.href.split("#"); /*Declaración de variable con valor asignado de, del evento detectado se obtiene el elemento actual del que se detectó dicho evento, se accede a su propiedad de referencia(url de la página), y se le aplica el método para dividir la URL en partes separadas por el carácter "#" (obteniendo un arreglo), que indica un identificador de elemento dentro de la misma página el cual es una sección de la misma*/
+        let selector = paths[paths.length - 1]; /*Declaración de variable con valor asignado de, del valor del arreglo obtenido, se obtiene el elemento mediante su índice, siendo la longitud de dicho arreglo menos uno, para obtener el último elemento, lo cual es el valor del indentificador de la sección*/
+       
+        scrollToElement(document.querySelector("#" + selector)); /*Se llama a ejecutar la función para desplazarse hacia un elemento, el cual recibe como argumento, del documento HTML, obtener un elemento mediante su selector, el cual es el identificador del elemento, siendo la concatenación del carácter "#" con el valor obtenido de dicha variable*/
+    });
+});
