@@ -331,6 +331,7 @@ body { /*Selector de tipo para el elemento HTML y sus elementos contenidos*/
 .form__container { /*Selector de clase para el elemento HTML que lo posea*/
     display: flex; /*Propiedad de comportamiento de visualización de elementos, con valor para ser flexible con felxbox*/
     flex-direction: column; /*Propiedad de dirección de los flex-items, con valor para ser en columna*/
+    align-items: center; /*Propiedad para alinear respecto al eje secundario, con valor para centrar*/
     gap: 20px; /*Propiedad de separació entre los felx-itemscon valor de 20 pixeles*/
     width: 458px; /*Propiedad de ancho, con valor de 458 pixeles*/
     max-width: 100%; /*Propiedad de ancho máximo, con valor del 100% de su contenedor*/
@@ -343,6 +344,7 @@ body { /*Selector de tipo para el elemento HTML y sus elementos contenidos*/
 
 .footer__form { /*Selector de clase para el elemento HTML que lo posea*/
     display: flex; /*Propiedad de comportamiento de visualización de elementos, con valor para ser flexible con felxbox*/
+    width: 100%; /*Propiedad de ancho, con valor del 100% de su contenedor*/
 }
 
 .comments__input { /*Selector de clase para el elemento HTML que lo posea*/
@@ -367,6 +369,7 @@ body { /*Selector de tipo para el elemento HTML y sus elementos contenidos*/
 
 .comments__list { /*Selector de clase para el elemento HTML que lo posea*/
     height: auto; /*Propiedad de alto, con valo auto para que sea del alto de su contenido*/
+    width: 100%; /*Propiedad de ancho, con valor del 100% de su contenedor*/
     max-height: 115px; /*Propiedad de alto máximo, con valor de 115 pixeles*/
     overflow: scroll; /*Propiedad de comportamiento de los elementos al desbordar de su contenerdor, con valor para mostrar la barra de desplazamiento*/
     padding: 0; /*Propiedad de margen interno, con valor 0 para no tener margen*/
