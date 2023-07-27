@@ -141,7 +141,7 @@ body { /*Selector de tipo para el elemento HTML y sus elementos contenidos*/
     display: block; /*Propiedad de comportamiento de visualizción del elemento, con valor para ser un elemento de bloque*/
     width: 100%; /*Propiedad de ancho, con valor del 100% de su contenedor*/
     min-width: 320px; /*ropiedad de ancho minimo, con valor para no disminuir los 320 pixeles*/
-    height: 140%; /*Propiedad de alto, con valor del 140% de su contenedor*/
+    height: 100%; /*Propiedad de alto, con valor del 100% de su contenedor*/
     min-height: 320px; /*Propiedad de alto minimo, con valor para no disminuir los 320 pixeles*/
     object-fit: cover; /*Propiedad para redimensonar un elemento dentro de su contenedor, con el valor para que el elemeto mantenga su relacion de aspecto siendo recortado*/
 }
