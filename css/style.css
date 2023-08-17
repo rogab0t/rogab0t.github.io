@@ -71,10 +71,10 @@ body { /*Selector de tipo para el elemento HTML y sus elementos contenidos*/
 /* header */
 
 .header { /*Selector de clase para el elemento HTML que lo posea*/
-    background-image: url(../images/header_back.png); /*Propiedad de imagen de fondo, con valor de obtener la imagen desde su ruta*/
+    background-image: linear-gradient(to right, var(--light-gray), #FFFFFF); /*Propiedad de imagen de fondo, con valor de obtener la imagen desde su ruta*/
     background-repeat: no-repeat; /*Propiedad de repetir el fondo, con el valor de no repetir el fondo*/
     background-position: bottom right; /*Propiedad para la posicion de la imagen con el valor para colocarla arriba a la derecha*/
-    background-size: 42%; /*Propiedad para el tamaño del fondo el cual es la imagen, con el valor del 42% de su contenedor*/
+    background-size: 100%; /*Propiedad para el tamaño del fondo el cual es la imagen, con el valor del 42% de su contenedor*/
     padding-top: 6rem; /*Propiedad de margen interno superior, con valor de 6 veces el tamaño de fuente raiz del documento HTML*/
 }
 
