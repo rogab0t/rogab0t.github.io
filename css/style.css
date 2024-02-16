@@ -477,6 +477,10 @@ body { /*Selector de tipo para el elemento HTML y sus elementos contenidos*/
     display: none; /*Propiedad de comportamiento de visualizacion, con valor para no ser mostrado*/
 }
 
+#close__camera {
+    width: 100%;
+}
+
 /* contact */
 
 .contact { /*Selector de clase para el elemento HTML que lo posea*/

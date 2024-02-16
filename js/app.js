@@ -8,6 +8,7 @@ const buttons = document.querySelector('.buttons'); //Declaración de constante,
 const video = document.querySelector('.video__source'); //Declaración de constante, con valor asignado de obtener desde el docuemnto HTML, el elemento mediante su selector, el cual es el selector de clase dentro de las comillas de los paréntesis
 const canvas = document.querySelector('#canvas'); //Declaración de constante, con valor asignado de obtener desde el docuemnto HTML, el elemento mediante su selector, el cual es el selector identificador dentro de las comillas de los paréntesis
 const botonFoto = document.querySelector("#boton__foto"); //Declaración de constante, con valor asignado de obtener desde el docuemnto HTML, el elemento mediante su selector, el cual es el selector identificador dentro de las comillas de los paréntesis
+const botonCerrarCamara = document.querySelector('#close__camera')
 let context = canvas.getContext('2d'); //Declaración de variable, con valor asignado de, del elemento "canvas" obtenido del HTML, se obtiene el contexto mediante el método de obtener contexto, el cual es el que está dentro de las comillas de los paréntesis, el cual es el contexto de dos dimesiones que se utilizará para dibujar en el lienzo/canvas 
 let uploadedImage; //Declaración de variable, sin valor asignado
 
@@ -81,6 +82,13 @@ botonFoto.addEventListener('click', function () { //A dicho elemento, se le apli
     video.srcObject.getTracks().forEach(track => track.stop()); //A dicho elemento, se accede a su objeto de recursos, al cual se le aplica el método de obtener una lista de los objetos MediaStreamTrack que son los flujos multimedia del elemento "video", a dicha lista se le aplica un ciclo forEach que itera por cada ojeto/track de flujos multimedia, ejecutando por cada uno, aplica el método de detener el flujo multimedia
     cameraContainer.style.display = "none"; //A dicho elemento, se accede a su propiedad de estilo, y a su propiedad de comportamiento de visualización, y se le asigna dicho valor para no mostralo
     buttonCamara.style.display = "inline-block"; //A dicho elemento, se accede a su propiedad de estilo, y a su propiedad de comportamiento de visualización, y se le asigna dicho valor para ser un elemento de línea y bloque
+});
+
+botonCerrarCamara.addEventListener('click', function () {
+    video.pause();
+    video.srcObject.getTracks().forEach(track => track.stop());
+    cameraContainer.style.display = "none";
+    buttonCamara.style.display = "inline-block";
 });
 
 // COMENTS FUNCTION //
