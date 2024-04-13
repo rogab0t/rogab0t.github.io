@@ -131,6 +131,8 @@ body { /*Selector de tipo para el elemento HTML y sus elementos contenidos*/
     margin-left: auto; /*Propiedad para el margen izquierdo, con el valor de auto para que el elemento se coloque al extremo opuesto*/
     overflow: hidden; /*Propiedad para la visibilidad del contenido dentro de un elemento, con el valor para mostrarlo hasta el final del contenedor sin desbordar el contenido*/
     scrollbar-width: none; /*Propiedad de ancho de barra de desplazamiento, con valor para no tener ancho*/
+    border-radius: 30px 0; /*Propiedad de redondeo de las esquinas, con valor de 30 pixeles en las esquinas superior izquierda e inferior derecha, y sera en las restantes*/
+    box-shadow: 6px 6px 20px; /*Propiedad de sobra de caja, con valor de 6 pixeles en el eje "y", 6 pixeles en el eje "x" y 20 pixeles de expansión*/
 }
 
 .hero__picture::-webkit-scrollbar { /*Selector de clase al cual se le aplica la pseudo clase de estilos de barra de desplazamiento en navegadores de webkit*/
@@ -518,6 +520,12 @@ body { /*Selector de tipo para el elemento HTML y sus elementos contenidos*/
 }
 
 @media (max-width: 425px) { /*Mediaqueri para un maximo de ancho de dispositivo de 425px*/
+    /* hero */
+    .hero__picture { /*Selector de clase para el elemento HTML que lo posea*/
+        margin-left: 0; /*Propiedad de margen externo izquierdo, con valo 0 para no tenerlo*/
+        margin: 0 auto; /*Propiedad de margen externo, con valor 0 superior e inferior, y auto a los lados para centrarlo horizontalmente*/
+    }
+
     /* photo */
 
     .mostrar__camara { /*Selector de clase para el elemento HTML que lo posea*/
