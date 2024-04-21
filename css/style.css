@@ -55,6 +55,7 @@ body { /*Selector de tipo para el elemento HTML y sus elementos contenidos*/
     font-size: 1rem; /*Propiedad de tamaña de fuene de letra, con valor de 1 vez el tamaño de fuente raiz del documento HTML*/
     color: #000000; /*Propiedad de color del texto, con valor del color negro en hexadecimal*/
     transition: 0.5s transform; /*Propiedad de transicion, con valor de 0.5 segundos, y para ser aplicado a la propiedad transform*/
+    text-transform: uppercase; /*Propiedad de transformación del texto, con valor para convertir todas las letras a mayúsculas*/
 }
 
 .nav__link:hover { /*Selector de clase al cual se le aplica la pseudo clase de enfocar un elemento que posee dicho selector de clase*/
@@ -71,7 +72,7 @@ body { /*Selector de tipo para el elemento HTML y sus elementos contenidos*/
 /* header */
 
 .header { /*Selector de clase para el elemento HTML que lo posea*/
-    background-image: linear-gradient(to right, var(--light-gray), #FFFFFF); /*Propiedad de imagen de fondo, con valor de obtener la imagen desde su ruta*/
+    background-image: linear-gradient(to right, var(--light-gray), #FFFFFF); /*Propiedad de imagen de fondo, con valor de ejecutar la función de gradiente linear, con valore para que sea hacia la derecha, valor del color personalizado y finalice en color blanco en hexadecimal*/
     background-repeat: no-repeat; /*Propiedad de repetir el fondo, con el valor de no repetir el fondo*/
     background-position: bottom right; /*Propiedad para la posicion de la imagen con el valor para colocarla arriba a la derecha*/
     background-size: 100%; /*Propiedad para el tamaño del fondo el cual es la imagen, con el valor del 42% de su contenedor*/
@@ -115,7 +116,7 @@ body { /*Selector de tipo para el elemento HTML y sus elementos contenidos*/
 }
 
 .different { /*Selector de clase para el elemento HTML que lo posea*/
-    color: #ff69b4; /*Propiedad de color del texto, con valor de color en hexadecimal*/
+    color: var(--green) /*Propiedad de color del texto, con valor de color del valor de color personalizado*/
 }
 
 .paragraph__3 { /*Selector de clase para el elemento HTML que lo posea*/
@@ -175,11 +176,12 @@ body { /*Selector de tipo para el elemento HTML y sus elementos contenidos*/
     background-size: cover; /*Propiedad para el tamaño del fondo el cual es la imagen, con el valor para para conservar sus dimensiones sin distorcionarse*/
     background-position: center; /*Propiedad para la posicion de la imagen con el valor para colocarla centrada*/
     color: transparent; /*Propiedad de color del texto, con valor transparente para no ser mostrado*/
-    transition: 0.5s transform; /*Propiedad de transicion, con valor de 0.5 segundos, y para ser aplicado a la propiedad transform*/
+    transition: 0.5s transform, 0.5s border-radius; /*Propiedad de transicion, con valor de 0.5 segundos, y para ser aplicado a la propiedad transform*/
 }
 
 .gallery__img:hover { /*Selector de clase al cual se le aplica la pseudo clase de enfocar un elemento que posee dicho selector de clase*/
     transform: scale(0.96); /*Propiedad de transformacion, con valor para escalar el elemento en 0.96 veces su tamaño*/
+    border-radius: 30px 0; /*Propiedad de redondeo de las esquinas, con valores de 30 pixeles a las esquinas superior izquierda e inferior derecha, y las demas en cero*/
 }
 
 .gallery__img--1 { /*Selector de clase modificador para el elemento HTML que lo posea*/
@@ -277,7 +279,7 @@ body { /*Selector de tipo para el elemento HTML y sus elementos contenidos*/
 /* quote */
 
 .quote__container { /*Selector de clase para el elemento HTML que lo posea*/
-    max-width: 730px; /*Propiedad de ancho maximo, con valor para no superar los 730 pixeles*/
+    max-width: 860px; /*Propiedad de ancho maximo, con valor para no superar los 860 pixeles*/
     margin: 6rem auto; /*Propiedad de margen externo, con valor de 6 veces el tamaño de fuente raiz del documento HTML superior e inforio, y 0 a los lados*/
     padding: 0 1rem; /*Propiedad de margen interno, con valor 0 superior e inferior, y 1 vez el tamaño de fuente raiz del HTML a los lados*/
 }
@@ -461,6 +463,7 @@ body { /*Selector de tipo para el elemento HTML y sus elementos contenidos*/
 }
 
 .send { /*Selector de clase para el elemento HTML que lo posea*/
+    cursor: pointer; /*Propiedad de cursor sobre el elemento, con valor para ser el apuntador*/
     height: 60px; /*Propiedad de alto, con valor de 60 pixeles*/
     width: 50%; /*Propiedad de ancho, con valor del 50% de su contenedor*/
     border: none; /*Propiedad de borde, con valor none para no tener borde*/

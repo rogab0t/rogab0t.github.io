@@ -100,6 +100,7 @@ const commentsList = document.querySelector(".comments__list"); //Declaración d
 
 function deleteComment(e) { //Declaración de función para eliminar comentarios, posee un parámetro para recibir como argumento el evento que ejecutará dicha función, la cual ejecuta el siguiente bloque
     commentsList.removeChild(e.target.parentNode.parentNode.parentNode); //A dicho elemento obtenido mediante su selector, se le aplica el método para remover elementos hijos, el cual recibe como argumento, del evento que ejecutó la función para eliminar comentarios, obtener el elemento que ejecutó dicho evento, y se accede a tres niveles superiores del nodo/elemento padre para acceder al contendor del comentario y removerlo
+    localStorage.removeItem((e.target.parentNode.parentNode.parentNode).firstChild.textContent)
 }
 
 function editComment(commentP, commentLi, buttonEdit, divButtons, buttonInteract) { //Declaración de función para editar comentarios, dicha función posee los parámetros para recibir los argumentos necesarios, siendo en este orden, el elemento "p" del comentario, el elemento "li" que contiene el comentario, el botón para editar el comentario, el contenedor de los botones para interactuar con el comentario, y el botón para interactuar con el comentario, la cual ejecuta el siguiente bloque
@@ -135,8 +136,8 @@ function createComment(commentValue) { //Declaración de función para crear un 
     commentLi.className = "comment__li"; //A dicho elemento "listado" creado, se accede a su selector de clase, y se le asigna dicha clase dentro de las comillas
 
     let commentP = document.createElement('p'); //Declaración de variable con valor asignado de, en el documento HTML, crear un elemento de tipo "parrafo"
-    commentP.className = "comment__p"; //A dicho elemento "parrafo" creado, se accede a su selector de clase, y se le asigna dicha clase dentro de las comillas
-    commentP.textContent = commentValue; //A dicho elemento "parrafo" creado, se accede a su texto contenido, y se le asigan, el valor del comentario ontenido en el argumento de la función 
+    commentP.className = "comment__p"; //A dicho elemento "parrafo" creado, se accede a su selector de clase, y se le asigna dicha clase dentro de las comillas 
+    commentP.textContent = commentValue; //A dicho elemento "parrafo" creado, se accede a su texto contenido, y se le asigan, el valor del comentario ontenido en el argumento de la función
 
     let buttonInteract = document.createElement('img'); //Declaración de variable con valor asignado de, en el documento HTML, crear un elemento de tipo "imagen"
     buttonInteract.classList.add('commentInteract'); //A dicho elemento "imagen" creado, se accede a su lista de clases, y se le aplica el método para añadir, dicha clase dentro de las comillas de los paréntesis
@@ -177,7 +178,7 @@ footerForm.addEventListener('submit', (e) => { //A dicho elemento obtenido media
     e.preventDefault(); //A dicho evento ejecutado, se el aplica el método para evitar su comportamiento por defecto
     let comment = commentsInput.value; //Declaración de variable con valor asignado de, de dicho elemento obtenido mediante su selector de clase el cual es el elemento "input" donde se escribe el comentario, y obtener su valor
     createComment(comment); //Se llama a ejecutar dicha función para crear el comentario, la cual recibe como argumento, dicho valor del "input" para escribir el comentario
-
+    localStorage.setItem(comment, comment)
     e.target.reset(); //Al elemento que ejecutó el evento, el cual es el formulario y el evento es 'submit', se le aplica el método de resetear los valores de los campos del formulario después de que se envía el formulario.
 });
 
@@ -203,4 +204,14 @@ links.forEach(link => { /*Al al lista/arreglo de los elementos obtenidos mediant
        
         scrollToElement(document.querySelector("#" + selector)); /*Se llama a ejecutar la función para desplazarse hacia un elemento, el cual recibe como argumento, del documento HTML, obtener un elemento mediante su selector, el cual es el identificador del elemento, siendo la concatenación del carácter "#" con el valor obtenido de dicha variable*/
     });
+});
+
+// COMENTS LOCAL STORAGE //
+
+window.addEventListener('DOMContentLoaded', () => {
+    for (let i = 0; i < localStorage.length; i++) {
+        let key = localStorage.key(i);
+        let value = localStorage.getItem(key);
+        createComment(value);
+    }
 });
