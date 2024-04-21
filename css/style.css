@@ -63,7 +63,7 @@ body { /*Selector de tipo para el elemento HTML y sus elementos contenidos*/
     transform: scale(1.1) translateY(-5px); /*Propiedad de transformacion, con valor para escalar el elemento en 1.1 veces su tamaño, y transladarlo en el eje "y" -5 pixeles*/
 }
 
-.nav--logo { /*Selector de clase para el elemento HTML que lo posea*/
+#nav--logo { /*Selector identificador para el elemento HTML que lo posea*/
     margin-right: auto; /*Propiedad para el margen derecho, con el valor de auto para que el elemento se coloque al extremo opuesto*/
     font-size: 2rem; /*Propiedad de tamaña de fuene de letra, con valor de 2 veces el tamaño de fuente raiz del documento HTML*/
     text-decoration: none; /*Propiedad de decoracion del texto, con valor none para no tener decorado*/
@@ -169,7 +169,7 @@ body { /*Selector de tipo para el elemento HTML y sus elementos contenidos*/
 }
 
 .projects:hover { /*Selector de clase al cual se le aplica la pseudo clase de enfocar un elemento que posee dicho selector de clase*/
-    background-color: #ebf0ff; /*Propiedad de color de fondo, con valor de color en haxadecimal*/
+    background-image: linear-gradient(to right, #dcf4ff, #0857cd); /*Propiedad de color de fondo, con valor de color en haxadecimal*/
 }
 
 .gallery__img { /*Selector de clase para el elemento HTML que lo posea*/
@@ -527,7 +527,7 @@ body { /*Selector de tipo para el elemento HTML y sus elementos contenidos*/
 @media (max-width: 425px) { /*Mediaqueri para un maximo de ancho de dispositivo de 425px*/
     /* nav */
 
-    .nav--logo { /*Selector de clase para el elemento HTML que lo posea*/
+    #nav--logo { /*Selector identificador para el elemento HTML que lo posea*/
         position: fixed;
         z-index: 10;
         background-color: white;
@@ -535,8 +535,8 @@ body { /*Selector de tipo para el elemento HTML y sus elementos contenidos*/
         width: 45px;
         height: 45px;
         border-radius: 8px 0;
-        right: 16px;
-        bottom: 2%;
+        right: 7%;
+        bottom: 5%;
         box-shadow: 2px 2px 7px -1px black;
         text-align: center;
     }
