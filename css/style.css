@@ -36,6 +36,7 @@ body { /*Selector de tipo para el elemento HTML y sus elementos contenidos*/
     z-index: 2; /*Propiedad para indicar el orden de importancia de visualizacion de elmentos apilados, con el valor de 2 para ser el primero en ser visible*/
     overflow: auto; /*Propiedad de comportamiento de los elementos al desbordar de su contenerdor, con valor para mostrar la barra de desplazamiento solo cuando sea necesario*/
     scrollbar-width: none; /*Propiedad de ancho de barra de desplazamiento, con valor para no tener ancho*/
+    box-shadow: 1px 0 15px -6px var(--dark-blue);
 }
 
 .nav::-webkit-scrollbar { /*Selector de clase al cual se le aplica la pseudo clase de estilos de barra de desplazamiento en navegadores de webkit*/
@@ -168,22 +169,19 @@ body { /*Selector de tipo para el elemento HTML y sus elementos contenidos*/
     display: none; /*Propiedad de comportamiento de visualizacion, con valor para no ser mostrado*/
 }
 
-.projects:hover { /*Selector de clase al cual se le aplica la pseudo clase de enfocar un elemento que posee dicho selector de clase*/
-    background-image: linear-gradient(to right, #dcf4ff, #0857cd); /*Propiedad de color de fondo, con valor de color en haxadecimal*/
-}
-
 .gallery__img { /*Selector de clase para el elemento HTML que lo posea*/
     width: 100%; /*Propiedad de ancho, con valor del 100% de su contenedor*/
     height: 100%; /*Propiedad de alto, con valor del 100% de su contenedor*/
     background-size: cover; /*Propiedad para el tamaño del fondo el cual es la imagen, con el valor para para conservar sus dimensiones sin distorcionarse*/
     background-position: center; /*Propiedad para la posicion de la imagen con el valor para colocarla centrada*/
     color: transparent; /*Propiedad de color del texto, con valor transparente para no ser mostrado*/
-    transition: 0.5s transform, 0.5s border-radius; /*Propiedad de transicion, con valor de 0.5 segundos, y para ser aplicado a la propiedad transform*/
+    transition: 0.5s transform, 0.5s border-radius, 0.5s  box-shadow; /*Propiedad de transicion, con valor de 0.5 segundos, y para ser aplicado a la propiedad transform*/
 }
 
 .gallery__img:hover { /*Selector de clase al cual se le aplica la pseudo clase de enfocar un elemento que posee dicho selector de clase*/
     transform: scale(0.96); /*Propiedad de transformacion, con valor para escalar el elemento en 0.96 veces su tamaño*/
     border-radius: 30px 0; /*Propiedad de redondeo de las esquinas, con valores de 30 pixeles a las esquinas superior izquierda e inferior derecha, y las demas en cero*/
+    box-shadow: 6px 4px 10px 2px var(--dark-blue);
 }
 
 .gallery__img--1 { /*Selector de clase modificador para el elemento HTML que lo posea*/
@@ -342,7 +340,7 @@ body { /*Selector de tipo para el elemento HTML y sus elementos contenidos*/
     width: 458px; /*Propiedad de ancho, con valor de 458 pixeles*/
     max-width: 100%; /*Propiedad de ancho máximo, con valor del 100% de su contenedor*/
     height: 100%; /*Propiedad de alto con valor del 100% de su contenedor*/
-    padding: 1.8rem; /*Propiedad de margen interno, con valor de 1.8 veces el tamaño de fuente raiz del HTML a todos los lados*/
+    padding: 1rem; /*Propiedad de margen interno, con valor de 1.8 veces el tamaño de fuente raiz del HTML a todos los lados*/
     margin: 0 auto; /*Propiedad de margen externo, con valor para centrar horizontalmente*/
     background-color: #FFFFFF; /*Propiedad de color del fondo, con valor del color blanco en hexadecimal*/
     box-shadow: 0px 40px 80px rgba(0, 0, 0, 0.1); /*Propiedad de sombra del elemento, con valor de 0 en eje "x", 40 pixeles en eje "y", 80px de difuminado, y de color en valor de rgba*/
@@ -376,7 +374,7 @@ body { /*Selector de tipo para el elemento HTML y sus elementos contenidos*/
 .comments__list { /*Selector de clase para el elemento HTML que lo posea*/
     height: auto; /*Propiedad de alto, con valo auto para que sea del alto de su contenido*/
     width: 100%; /*Propiedad de ancho, con valor del 100% de su contenedor*/
-    max-height: 115px; /*Propiedad de alto máximo, con valor de 115 pixeles*/
+    max-height: 138px; /*Propiedad de alto máximo, con valor de 138 pixeles*/
     overflow: scroll; /*Propiedad de comportamiento de los elementos al desbordar de su contenerdor, con valor para mostrar la barra de desplazamiento*/
     padding: 0; /*Propiedad de margen interno, con valor 0 para no tener margen*/
     display: flex; /*Propiedad de comportamientode visualización, con valor para ser flexible con flexbox*/
@@ -406,6 +404,7 @@ body { /*Selector de tipo para el elemento HTML y sus elementos contenidos*/
 }
 
 .buttonsContainer { /*Selector de clase para el elemento HTML que lo posea*/
+    cursor: pointer; /*Propiedad de cursor sobre el elemento, con valor para ser el apuntador*/
     display: flex; /*Propiedad de comportamientode visualización, con valor para ser flexible con flexbox*/
     flex-direction: column; /*Propiedad de dirección de los flex-items, con valor para ser en columna*/
     align-items: flex-end; /*Propiedad para alinear respecto al eje secundario, con valor para colocarlo al final*/
@@ -422,11 +421,12 @@ body { /*Selector de tipo para el elemento HTML y sus elementos contenidos*/
 }
 
 .comment__buttons { /*Selector de clase para el elemento HTML que lo posea*/
+    cursor: pointer; /*Propiedad de cursor sobre el elemento, con valor para ser el apuntador*/
     height: 30px; /*Propiedade alto, con valor de 30 pixeles*/
     width: 60px; /*Propiedade ancho, con valor de 60 pixeles*/
     border: none; /*Propiedad de borde, con valor none para no tener borde*/
-    color: #FFFFFF; /*Propiedad de color del texto, con valor del color blanco en hexadecimal*/
-    background-color: var(--green); /*Propiedad de color de fondo, con valor de una propiedad personalizada*/
+    font-weight: bold;
+    background-color: var(--light-gray); /*Propiedad de color de fondo, con valor de una propiedad personalizada*/
     box-shadow: 0px 10px 20px rgba(54, 107, 255, 0.2); /*Propiedad de sombra del elemento, con valor de 0 en eje "x", 10 pixeles en eje "y", 20px de difuminado, y de color en valor de rgba*/
 }
 
@@ -465,13 +465,15 @@ body { /*Selector de tipo para el elemento HTML y sus elementos contenidos*/
 }
 
 .send { /*Selector de clase para el elemento HTML que lo posea*/
+    font-weight: bold;
     cursor: pointer; /*Propiedad de cursor sobre el elemento, con valor para ser el apuntador*/
     height: 60px; /*Propiedad de alto, con valor de 60 pixeles*/
     width: 50%; /*Propiedad de ancho, con valor del 50% de su contenedor*/
-    border: none; /*Propiedad de borde, con valor none para no tener borde*/
-    color: #FFFFFF; /*Propiedad de color del texto, con valor del color blanco en hexadecimal*/
-    background-color: var(--green); /*Propiedad de color de fondo, con valor de una propiedad personalizada*/
+    border-radius: 0;
+    border: solid 1px black; /*Propiedad de borde, con valor none para no tener borde*/
+    background-color: var(--light-gray); /*Propiedad de color de fondo, con valor de una propiedad personalizada*/
     box-shadow: 0px 10px 20px rgba(54, 107, 255, 0.2); /*Propiedad de sombra del elemento, con valor de 0 en eje "x", 10 pixeles en eje "y", 20px de difuminado, y de color en valor de rgba*/
+    transition: border-radius 0.5s ease-in;
 }
 
 .form__send:hover { /*Selector de clase al cual se le aplica la pseudo clase de enfocar un elemento que posee dicho selector de clase*/
@@ -537,7 +539,7 @@ body { /*Selector de tipo para el elemento HTML y sus elementos contenidos*/
         border-radius: 8px 0;
         right: 7%;
         bottom: 5%;
-        box-shadow: 2px 2px 7px -1px black;
+        box-shadow: 2px 2px 7px -1px var(--dark-blue);
         text-align: center;
     }
 
