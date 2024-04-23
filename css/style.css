@@ -637,8 +637,6 @@ svg.moon { /*Selector de tipo para dicho elemento HTML, que posea dicho selector
         right: 0;
         bottom: 0;
         display: flex;
-        width: 100vw;
-        height: 85vh;
     }
 
     .dark-mode-controls {
@@ -653,8 +651,8 @@ svg.moon { /*Selector de tipo para dicho elemento HTML, que posea dicho selector
         visibility: visible;
         padding: 15px 5px;
         border-radius: 0 30px;
-        bottom: 73px;
-        right: 78px;
+        bottom: 81px;
+        right: 81px;
         left: auto;
         transform: scale(1);
         transition: all 0.3s ease-in;

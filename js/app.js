@@ -226,7 +226,7 @@ botonLogo.addEventListener('click', () => {
 });
 
 botonLogo.addEventListener('blur', () => {
-    buttonSwitchDark.classList.toggle('show');
+    buttonSwitchDark.classList.remove('show');
 });
 
 const colorSchemeLSKey = "page--color--scheme" //Declaración de constante con valor asignado de, una cadena de texto, para el nombre clave del alamcenamiento local
