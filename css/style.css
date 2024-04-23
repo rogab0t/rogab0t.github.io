@@ -638,7 +638,7 @@ svg.moon { /*Selector de tipo para dicho elemento HTML, que posea dicho selector
         bottom: 0;
         display: flex;
         width: 100vw;
-        height: 100vh;
+        height: 85vh;
     }
 
     .dark-mode-controls {
