@@ -168,7 +168,7 @@ body { /*Selector de tipo para el elemento HTML y sus elementos contenidos*/
     grid-auto-rows: 320px; /*Propiedad para crear filas automaticas, con valor de 320 pixeles como tamaño minimo*/
     transition: 1s background-color; /*Propiedad de transicion, con valor de 1 segundo, y para ser aplicado a la propiedad background-color*/
     width: 100%;
-    max-width: 1280px;
+    max-width: 1439px;
     margin: 0 auto;
 }
 
