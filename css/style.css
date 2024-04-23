@@ -6,7 +6,13 @@
     --light-gray: #ECF0FD; /*Propiedad personalizada de color en hexadecimal*/
     --very--light-gray: #fefeff; /*Propiedad personalizada de color en hexadecimal*/
     --green: #4CAF50; /*Propiedad personalizada de color en hexadecimal*/
+    --light--green: #00F07D;
     --dark-blue: #122250A3; /*Propiedad personalizada de color en hexadecimal*/
+    --ligth-blue: #7dc5f8;
+    --white: #FFFFFF;
+    --black: #000000;
+    --sun-color: #bdb76b; /*Propiedad personalizada de color en hexadecimal*/
+    --moon-color: #022c43; /*Propiedad personalizada de color en hexadecimal*/
 }
 
 * { /*Selector universal para seleccionar a todos los elementos del documento HTML*/
@@ -18,6 +24,7 @@ body { /*Selector de tipo para el elemento HTML y sus elementos contenidos*/
     font-family: 'Poppins', sans-serif; /*Propiedad de fuente de letra, con valor de la fuente importada*/
     font-weight: 600; /*Propiedad de peso de fuente de letra, con valor de negrita*/
     font-size: 16px; /*Propiedad de tamaña de fuene de letra, con valor de 16 pixeles*/
+    background-color: var(--white);
 }
 
 .container { /*Selector de clase para el elemento HTML que lo posea*/
@@ -31,7 +38,7 @@ body { /*Selector de tipo para el elemento HTML y sus elementos contenidos*/
 .nav { /*Selector de clase para el elemento HTML que lo posea*/
     height: 95px;
     width: 100%; /*Propiedad de ancho, con valor del 100% de su contenedor*/
-    background-color: #FFFFFF; /*Propiedad de color del fondo, con valor del color blanco en hexadecimal*/
+    background-color: var(--white); /*Propiedad de color del fondo, con valor del color blanco en hexadecimal*/
     position: fixed; /*Propiedad de posicion del elemento, con valor para ser fijo en el viewport*/
     z-index: 2; /*Propiedad para indicar el orden de importancia de visualizacion de elmentos apilados, con el valor de 2 para ser el primero en ser visible*/
     overflow: auto; /*Propiedad de comportamiento de los elementos al desbordar de su contenerdor, con valor para mostrar la barra de desplazamiento solo cuando sea necesario*/
@@ -55,7 +62,7 @@ body { /*Selector de tipo para el elemento HTML y sus elementos contenidos*/
 .nav__link { /*Selector de clase para el elemento HTML que lo posea*/
     text-decoration: none; /*Propiedad de decoracion del texto, con valor none para no tener decorado*/
     font-size: 1rem; /*Propiedad de tamaña de fuene de letra, con valor de 1 vez el tamaño de fuente raiz del documento HTML*/
-    color: #000000; /*Propiedad de color del texto, con valor del color negro en hexadecimal*/
+    color: var(--black); /*Propiedad de color del texto, con valor del color negro en hexadecimal*/
     transition: 0.5s transform; /*Propiedad de transicion, con valor de 0.5 segundos, y para ser aplicado a la propiedad transform*/
     text-transform: uppercase; /*Propiedad de transformación del texto, con valor para convertir todas las letras a mayúsculas*/
 }
@@ -65,17 +72,73 @@ body { /*Selector de tipo para el elemento HTML y sus elementos contenidos*/
 }
 
 #nav--logo { /*Selector identificador para el elemento HTML que lo posea*/
-    margin-right: auto; /*Propiedad para el margen derecho, con el valor de auto para que el elemento se coloque al extremo opuesto*/
     font-size: 2rem; /*Propiedad de tamaña de fuene de letra, con valor de 2 veces el tamaño de fuente raiz del documento HTML*/
     text-decoration: none; /*Propiedad de decoracion del texto, con valor none para no tener decorado*/
-    color: #000000; /*Propiedad de color del texto, con valor del color negro en hexadecimal*/
+    color: var(--black); /*Propiedad de color del texto, con valor del color negro en hexadecimal*/
     text-transform: uppercase;
+}
+
+.mobile-logo-container {
+    display: flex;
+    margin-right: auto;
+}
+
+.dark-mode-controls { /*Selector de clase para el elemento HTML que lo posea*/
+    position: fixed;
+    background-color: var(--white);
+    padding: 10px 5px;
+    border: 2px solid var(--black);
+    border-radius: 20px 0;
+    bottom: 65px;
+    z-index: 8;
+    box-shadow: 2px 2px 7px -1px var(--dark-blue);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.dark-toggle { /*Selector de clase para el elemento HTML que lo posea*/
+    display: none; /*Propiedad de comportamiento de visualización, con valor none para no ser visible*/
+}
+
+.dark-toggle + label { /*Selector de tipo para dicho elemento HTML, que es hermano adyacente, del elemento que posee dicho selector de clase*/
+    display: inline-block;
+    height: 17px;
+    width: 32px;
+    border-radius: 32px;
+    background-color: var(--very--light-gray);
+    border: 2px solid var(--black);
+    position: relative;
+}
+
+.dark-toggle + label::after { /*Pseudo elemento creado depués del selector de tipo para dicho elemento HTML, que es hermano adyacente, del elemento que posee dicho selector de clase*/
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    left: -14%;
+    bottom: -9%;
+    border-radius: 50%;
+    background-color: var(--black);
+    transition: left 0.2s ease-in-out;
+}
+
+.dark-toggle:checked + label::after { /*Pseudo elemento creado depués del selector de tipo para dicho elemento HTML, que es hermano adyacente, del elemento que posee dicho selector de clase, con la pseudo clase de comprobado/seleccionado*/
+    left: 61%;
+}
+
+svg.sun { /*Selector de tipo para dicho elemento HTML, que posea dicho selector de clase*/
+    fill: var(--sun-color); /*Propiedad de relleno, con valor de propiedad personalizada*/
+}
+
+svg.moon { /*Selector de tipo para dicho elemento HTML, que posea dicho selector de clase*/
+    fill: var(--moon-color); /*Propiedad de relleno, con valor de propiedad personalizada*/
 }
 
 /* header */
 
 .header { /*Selector de clase para el elemento HTML que lo posea*/
-    background-image: linear-gradient(to right, var(--light-gray), #FFFFFF); /*Propiedad de imagen de fondo, con valor de ejecutar la función de gradiente linear, con valore para que sea hacia la derecha, valor del color personalizado y finalice en color blanco en hexadecimal*/
+    background-image: linear-gradient(to right, var(--light-gray), var(--white)); /*Propiedad de imagen de fondo, con valor de ejecutar la función de gradiente linear, con valore para que sea hacia la derecha, valor del color personalizado y finalice en color blanco en hexadecimal*/
     background-repeat: no-repeat; /*Propiedad de repetir el fondo, con el valor de no repetir el fondo*/
     background-position: bottom right; /*Propiedad para la posicion de la imagen con el valor para colocarla arriba a la derecha*/
     background-size: 100%; /*Propiedad para el tamaño del fondo el cual es la imagen, con el valor del 42% de su contenedor*/
@@ -101,6 +164,7 @@ body { /*Selector de tipo para el elemento HTML y sus elementos contenidos*/
 .paragraph__1 { /*Selector de clase para el elemento HTML que lo posea*/
     font-size: 1rem; /*Propiedad de tamaña de fuene de letra, con valor de 1 vez el tamaño de fuente raiz del documento HTML*/
     font-weight: 400; /*Propiedad de peso de fuente de letra, con valor de regular*/
+    color: var(--black);
 }
 
 .paragraph__1::before { /*Selector de clase al cual se le aplica el pseudo elemento que se colocara antes del elemento de dicho selector de clase*/
@@ -109,13 +173,14 @@ body { /*Selector de tipo para el elemento HTML y sus elementos contenidos*/
     height: 10px; /*Propiedad de alto, con valor de 10 pixeles*/
     display: inline-block; /*Propiedad de comportamiento de visualizacion, con valor para ser un elemento de linea y bloque*/
     border-radius: 50%; /*Propiedad de redondeo de esquinas, con valor del 50% para crear un circulo*/
-    background-color: #00F07D; /*Propiedad de color del fondo, con valor de color en hexadecimal*/
+    background-color: var(--light--green); /*Propiedad de color del fondo, con valor de color en hexadecimal*/
     margin-right: 5px; /*Propiedad para el margen derecho, con el valor de 5 pixeles*/
 }
 
 .paragraph__2 { /*Selector de clase para el elemento HTML que lo posea*/
     font-size: 2.5rem; /*Propiedad de tamaña de fuene de letra, con valor de 2.5 veces el tamaño de fuente raiz del documento HTML*/
     font-weight: 600; /*Propiedad de peso de fuente de letra, con valor de negrita*/
+    color: var(--black);
 }
 
 .different { /*Selector de clase para el elemento HTML que lo posea*/
@@ -126,6 +191,7 @@ body { /*Selector de tipo para el elemento HTML y sus elementos contenidos*/
     padding-top: .5rem; /*Propiedad de margen interno superior, con valor de .5 veces el tamaño de fuente raiz del docdumento HTML*/
     font-weight: 400; /*Propiedad de peso de fuente de letra, con valor de regular*/
     font-size: 1.1rem; /*Propiedad de tamaña de fuene de letra, con valor de 1.1 veces el tamaño de fuente raiz del documento HTML*/
+    color: var(--black);
 }
 
 .hero__picture { /*Selector de clase para el elemento HTML que lo posea*/
@@ -136,7 +202,7 @@ body { /*Selector de tipo para el elemento HTML y sus elementos contenidos*/
     overflow: hidden; /*Propiedad para la visibilidad del contenido dentro de un elemento, con el valor para mostrarlo hasta el final del contenedor sin desbordar el contenido*/
     scrollbar-width: none; /*Propiedad de ancho de barra de desplazamiento, con valor para no tener ancho*/
     border-radius: 30px 0; /*Propiedad de redondeo de las esquinas, con valor de 30 pixeles en las esquinas superior izquierda e inferior derecha, y sera en las restantes*/
-    box-shadow: 6px 6px 20px; /*Propiedad de sobra de caja, con valor de 6 pixeles en el eje "y", 6 pixeles en el eje "x" y 20 pixeles de expansión*/
+    box-shadow: 6px 6px 20px var(--dark-blue); /*Propiedad de sobra de caja, con valor de 6 pixeles en el eje "y", 6 pixeles en el eje "x" y 20 pixeles de expansión*/
 }
 
 .hero__picture::-webkit-scrollbar { /*Selector de clase al cual se le aplica la pseudo clase de estilos de barra de desplazamiento en navegadores de webkit*/
@@ -156,7 +222,7 @@ body { /*Selector de tipo para el elemento HTML y sus elementos contenidos*/
 
 .projects__container {
     width: 100%;
-    background-image: linear-gradient(to right, #FFFFFF, var(--light-gray));
+    background-image: linear-gradient(to right, var(--white), var(--light-gray));
 }
 
 .projects { /*Selector de clase para el elemento HTML que lo posea*/
@@ -217,8 +283,12 @@ body { /*Selector de tipo para el elemento HTML y sus elementos contenidos*/
 
 /* benefits */
 
+.item__title {
+    color: var(--black);
+}
+
 .benefits { /*Selector de clase para el elemento HTML que lo posea*/
-    background-image: linear-gradient(to left, #FFFFFF, var(--light-gray)); /*Propiedad para colocar una imagen de fondo, con valor de colocar un gradiente, en direccion a la izquierda, con valores de color en hexadecimal y de propiedad personalizada*/
+    background-image: linear-gradient(to left, var(--white), var(--light-gray)); /*Propiedad para colocar una imagen de fondo, con valor de colocar un gradiente, en direccion a la izquierda, con valores de color en hexadecimal y de propiedad personalizada*/
     background-size: 100%; /*Propiedad para el tamaño del fondo el cual es la imagen, con el valor del 100% de su contenedor*/
 }
 
@@ -242,6 +312,7 @@ body { /*Selector de tipo para el elemento HTML y sus elementos contenidos*/
 .benefits__title { /*Selector de clase para el elemento HTML que lo posea*/
     font-size: 2.3rem; /*Propiedad de tamaña de fuene de letra, con valor de 2.3 veces el tamaño de fuente raiz del documento HTML*/
     font-weight: 600; /*Propiedad de peso de fuente de letra, con valor de negrita*/
+    color: var(--black);
 }
 
 .benefits__description { /*Selector de clase para el elemento HTML que lo posea*/
@@ -276,6 +347,7 @@ body { /*Selector de tipo para el elemento HTML y sus elementos contenidos*/
     border-radius: 50%; /*Propiedad de redondeo de esquinas, con valor del 50% para crear un circulo*/
     display: block; /*Propiedad de comportamiento de visualizacion, con valor para ser un elemento de bloque*/
     background-color: var(--very--light-gray); /*Propiedad de color de fondo, con valor de una propiedad personalizada*/
+    fill: var(--gray);
 }
 
 .item__paragraph { /*Selector de clase para el elemento HTML que lo posea*/
@@ -316,6 +388,7 @@ body { /*Selector de tipo para el elemento HTML y sus elementos contenidos*/
     font-size: 1rem; /*Propiedad de tamaña de fuene de letra, con valor de 1 vez el tamaño de fuente raiz del documento HTML*/
     font-weight: 700; /*Propiedad de peso de fuente de letra, con valor de extra negrita*/
     padding-top: 1.2rem; /*Propiedad de margen interno superior, con valor de 1.2 veces el tamaño de fuente raiz del documento HTML*/
+    color: var(--black);
 }
 
 .person__proffesion { /*Selector de clase para el elemento HTML que lo posea*/
@@ -326,7 +399,7 @@ body { /*Selector de tipo para el elemento HTML y sus elementos contenidos*/
 /* footer */
 
 .footer { /*Selector de clase para el elemento HTML que lo posea*/
-    background-image: linear-gradient(to left, #FFFFFF, var(--light-gray)); /*Propiedad para colocar una imagen de fondo, con valor de colocar un gradiente, en direccion a la izquierda, con valores de color en hexadecimal y de propiedad personalizada*/
+    background-image: linear-gradient(to left, var(--white), var(--light-gray)); /*Propiedad para colocar una imagen de fondo, con valor de colocar un gradiente, en direccion a la izquierda, con valores de color en hexadecimal y de propiedad personalizada*/
 }
 
 .footer__container { /*Selector de clase para el elemento HTML que lo posea*/
@@ -349,7 +422,7 @@ body { /*Selector de tipo para el elemento HTML y sus elementos contenidos*/
     height: 100%; /*Propiedad de alto con valor del 100% de su contenedor*/
     padding: 1rem; /*Propiedad de margen interno, con valor de 1.8 veces el tamaño de fuente raiz del HTML a todos los lados*/
     margin: 0 auto; /*Propiedad de margen externo, con valor para centrar horizontalmente*/
-    background-color: #FFFFFF; /*Propiedad de color del fondo, con valor del color blanco en hexadecimal*/
+    background-color: var(--white); /*Propiedad de color del fondo, con valor del color blanco en hexadecimal*/
     box-shadow: 0px 40px 80px rgba(0, 0, 0, 0.1); /*Propiedad de sombra del elemento, con valor de 0 en eje "x", 40 pixeles en eje "y", 80px de difuminado, y de color en valor de rgba*/
 }
 
@@ -367,6 +440,7 @@ body { /*Selector de tipo para el elemento HTML y sus elementos contenidos*/
     border: 1px solid var(--gray); /*Propiedad de borde, con valor de 1 pixel de ancho, solido, y de color de una propiedad personalizada*/
     font-family: var(--secondary-texts); /*Propiedad de familia de fuente, con valor de propiedad personalizada*/
     font-weight: 400; /*Propiedad de peso de fuente de letra, con valor de regular*/
+    color: var(--black);
 }
 
 .comments__input::placeholder { /*Selector de clase al cual se le aplica el pseudo elemento de texto demostrativo de dicho selector de clase*/
@@ -401,6 +475,7 @@ body { /*Selector de tipo para el elemento HTML y sus elementos contenidos*/
     margin-right: auto; /*Propiedad para el margen derecho, con el valor de auto para que el elemento se coloque al extremo opuesto*/
     word-wrap: break-word; /*Propiedad de ajuste de línea de palabras con valor para hacer un salto de línea para no desbordar el contenido*/
     overflow-wrap: anywhere; /*Propiedad de saltos de línea, con valor para colocarlo cuando sea necesario en cualquier lugar*/
+    color: var(--black);
 }
 
 .buttonsComments { /*Selector de clase para el elemento HTML que lo posea*/
@@ -434,7 +509,8 @@ body { /*Selector de tipo para el elemento HTML y sus elementos contenidos*/
     border: none; /*Propiedad de borde, con valor none para no tener borde*/
     font-weight: bold;
     background-color: var(--light-gray); /*Propiedad de color de fondo, con valor de una propiedad personalizada*/
-    box-shadow: 0px 10px 20px rgba(54, 107, 255, 0.2); /*Propiedad de sombra del elemento, con valor de 0 en eje "x", 10 pixeles en eje "y", 20px de difuminado, y de color en valor de rgba*/
+    box-shadow: 0px 0px 10px 0px var(--dark-blue); /*Propiedad de sombra del elemento, con valor de 0 en eje "x", 10 pixeles en eje "y", 20px de difuminado, y de color en valor de rgba*/
+    color: var(--black);
 }
 
 .label__message { /*Selector de clase para el elemento HTML que lo posea*/
@@ -477,14 +553,15 @@ body { /*Selector de tipo para el elemento HTML y sus elementos contenidos*/
     height: 60px; /*Propiedad de alto, con valor de 60 pixeles*/
     width: 50%; /*Propiedad de ancho, con valor del 50% de su contenedor*/
     border-radius: 0;
-    border: solid 1px black; /*Propiedad de borde, con valor none para no tener borde*/
+    border: solid 1px var(--light-gray); /*Propiedad de borde, con valor none para no tener borde*/
     background-color: var(--light-gray); /*Propiedad de color de fondo, con valor de una propiedad personalizada*/
-    box-shadow: 0px 10px 20px rgba(54, 107, 255, 0.2); /*Propiedad de sombra del elemento, con valor de 0 en eje "x", 10 pixeles en eje "y", 20px de difuminado, y de color en valor de rgba*/
+    box-shadow: 0px 0px 19px -3px var(--dark-blue); /*Propiedad de sombra del elemento, con valor de 0 en eje "x", 10 pixeles en eje "y", 20px de difuminado, y de color en valor de rgba*/
     transition: border-radius 0.5s ease-in;
+    color: var(--black);
 }
 
 .form__send:hover { /*Selector de clase al cual se le aplica la pseudo clase de enfocar un elemento que posee dicho selector de clase*/
-    outline: 2px solid #7dc5f8 ; /*Propiedad de linea en el margen, con el valor de 1 pixel de grosor, solido, de color blanco en hexadecimal*/
+    outline: 2px solid var(--ligth-blue) ; /*Propiedad de linea en el margen, con el valor de 1 pixel de grosor, solido, de color blanco en hexadecimal*/
 }
 
 /* photo */
@@ -527,6 +604,7 @@ body { /*Selector de tipo para el elemento HTML y sus elementos contenidos*/
 .media__img { /*Selector de clase para el elemento HTML que lo posea*/
     width: 33px; /*Propiedad de ancho, con valor de 20 pixeles*/
     transition: 0.5s transform; /*Propiedad de transicion, con valor de 0.5 segundos, y para ser aplicado a la propiedad transform*/
+    fill: var(--black);
 }
 
 .media__img:hover { /*Selector de clase al cual se le aplica la pseudo clase de enfocar un elemento que posee dicho selector de clase*/
@@ -537,21 +615,49 @@ body { /*Selector de tipo para el elemento HTML y sus elementos contenidos*/
     /* nav */
 
     #nav--logo { /*Selector identificador para el elemento HTML que lo posea*/
-        position: fixed;
+        position: absolute;
         z-index: 10;
-        background-color: white;
-        border: 2px solid black;
+        background-color: var(--white);
+        border: 2px solid var(--black);
         width: 45px;
         height: 45px;
         border-radius: 8px 0;
-        right: 7%;
-        bottom: 5%;
+        right: 35px;
+        bottom: 30px;
         box-shadow: 2px 2px 7px -1px var(--dark-blue);
         text-align: center;
     }
 
     .nav__link { /*Selector de clase para el elemento HTML que lo posea*/
         font-size: 0.9rem;
+    }
+
+    .mobile-logo-container {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .dark-mode-controls {
+        visibility: hidden;
+        bottom: 34px;
+        right: 10px;
+        transition: all 0.3s ease-in;
+        transform: scale(0);
+    }
+
+    .dark-mode-controls.show { /*Selector de clase para el elemento HTML que lo posea*/
+        visibility: visible;
+        padding: 15px 5px;
+        border-radius: 0 30px;
+        bottom: 73px;
+        right: 78px;
+        left: auto;
+        transform: scale(1);
+        transition: all 0.3s ease-in;
     }
 
     /* hero */
@@ -592,7 +698,7 @@ body { /*Selector de tipo para el elemento HTML y sus elementos contenidos*/
         top: 0; /*Propiedad de posicion superior, con valor en 0 para quedar al inicio superior de su contenedor*/
         left: 0; /*Propiedad de posicion izquierda, con valor en 0 para quedar al inicio izquierdo de su contenedor*/
         display: block; /*Propiedad de comportamiento de visualizacion, con valor para ser un elemento de bloque*/
-        background-color: #ffffff; /*Propiedad de color del fondo, con valor del color blanco en hexadecimal*/
+        background-color: var(--white); /*Propiedad de color del fondo, con valor del color blanco en hexadecimal*/
     }
 
     .buttons { /*Selector de clase para el elemento HTML que lo posea*/
@@ -608,4 +714,34 @@ body { /*Selector de tipo para el elemento HTML y sus elementos contenidos*/
     #boton__foto { /*Selector de indentificador para el elemento HTML que lo posea*/
         width: 100%; /*Propiedad de ancho, con valor del 100% de su contenedor*/
     }
+}
+
+@media(prefers-color-scheme: dark), (prefers-color-scheme: sistem){ /*Mediaqueri para, obtener del dispositivo, el color de tema oscuro seleccionado, y detectar del dispositivo, el color de tema sin seleccionar, para aplicar los siguientes estilos*/
+    body:not(.force-light) { /*Selector de tipo para dicho elemento HTML, al no contener dicho selector de clase*/
+        --gray: #6a6c6f; /*Propiedad personalizada de color en hexadecimal*/
+        --light-gray: #a6a7aa; /*Propiedad personalizada de color en hexadecimal*/
+        --very--light-gray: #494949; /*Propiedad personalizada de color en hexadecimal*/
+        --green: #a23450; /*Propiedad personalizada de color en hexadecimal*/
+        --light--green: #741730;
+        --dark-blue: #122250A3; /*Propiedad personalizada de color en hexadecimal*/
+        --ligth-blue: #865cd4;
+        --white: #000000;
+        --black: #ffffff;
+        --sun-color: #dfdfdf; /*Propiedad personalizada de color en hexadecimal*/
+        --moon-color: #c0e4f7; /*Propiedad personalizada de color en hexadecimal*/
+    }
+}
+
+body.force-dark { /*Selector de tipo para dicho elemento HTML, al contener dicho selector de clase*/
+    --gray: #ddcbf5;
+    --light-gray: #362e45;
+    --very--light-gray: #504465;
+    --green: #6bc7d6;
+    --light--green: #68ecd8;
+    --dark-blue: #a9afb0a3;
+    --ligth-blue: #ab90dd;
+    --white: #1F1B24;
+    --black: #ffffff;
+    --sun-color: #ffef00;
+    --moon-color: #c0e4f7;
 }

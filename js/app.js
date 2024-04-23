@@ -215,3 +215,84 @@ window.addEventListener('DOMContentLoaded', () => {
         createComment(value);
     }
 });
+
+// DARKMODE //
+
+const botonLogo = document.querySelector('#nav--logo');
+const buttonSwitchDark = document.querySelector('.dark-mode-controls');
+
+botonLogo.addEventListener('click', () => {
+    buttonSwitchDark.classList.toggle('show')
+});
+
+botonLogo.addEventListener('blur', () => {
+    buttonSwitchDark.classList.toggle('show');
+});
+
+const colorSchemeLSKey = "page--color--scheme" //Declaración de constante con valor asignado de, una cadena de texto, para el nombre clave del alamcenamiento local
+let checkBoxElement = document.querySelector('.dark-toggle'); //Declaración de variable con valor asignado de, del documento HTML, obtener el primer elemento mediante su selector, el cual es el de clase dentro de las comillas de los paréntesis
+
+function isUsingDarkMode() { //Declaración de función, para detectar si se está usando el mode oscuro, la cual ejecuta el siguiente bloque
+    let bodyElement = document.querySelector('body'); //Declaración de variable con valor asignado de, del documento HTML, obtener el primer elemento mediante su selector, el cual es el de tipo dentro de las comillas de los paréntesis
+    let bodyStyle = getComputedStyle(bodyElement); //Declaración de variable con valor asignado de, obtener los estilos computados/aplicados, del elemento anterior obtenido mediante su selector
+    let bodyBackgroundColor = bodyStyle.backgroundColor //Declaración de variable con valor asignado de, de dichos estilos computados obtenidos, obtener la propiedad de color de fondo
+    let darkModeBgColor = 'rgb(13, 27, 30)'; //Declaración de variable con valor asignado de, una cadena que representa un color en rgb
+
+    return darkModeBgColor === bodyBackgroundColor; //Se retorna la comparación de, el valor de dicha variable que es el color de fondo del modo oscuro, con el valor de dicha variable que es el color de fondo computado del elemento obtenido mediante su selector de clase
+}
+
+function changeToLightMode() { //Declaración de función, para cambiar a modo claro, la cual ejecuta el siguiente bloque
+    let bodyElement = document.querySelector('body'); //Declaración de variable con valor asignado de, del documento HTML, obtener el primer elemento mediante su selector, el cual es el de tipo dentro de las comillas de los paréntesis
+    bodyElement.classList.remove('force-dark'); //A elemento anterior obtenido mediante su selector, se accede a su lista de clases, y se le remueve la clase, que está dentro de las comillas de los paréntesis
+    bodyElement.classList.add('force-light'); //A elemento anterior obtenido mediante su selector, se accede a su lista de clases, y se le añade la clase, que está dentro de las comillas de los paréntesis
+    setColorSchemeToLS("light"); //Se llama a ejecutar dicha función, para establecer en el almacenamiento local el color del tema escogido, la cual recibe como argumento la cadena que representa el modo claro
+}
+
+function changeToDarkMode() { //Declaración de función, para cambiar a modo oscuro, la cual ejecuta el siguiente bloque
+    let bodyElement = document.querySelector('body'); //Declaración de variable con valor asignado de, del documento HTML, obtener el primer elemento mediante su selector, el cual es el de tipo dentro de las comillas de los paréntesis
+    bodyElement.classList.remove('force-light');  //A elemento anterior obtenido mediante su selector, se accede a su lista de clases, y se le remueve la clase, que está dentro de las comillas de los paréntesis
+    bodyElement.classList.add('force-dark'); //A elemento anterior obtenido mediante su selector, se accede a su lista de clases, y se le añade la clase, que está dentro de las comillas de los paréntesis
+    setColorSchemeToLS("dark"); //Se llama a ejecutar dicha función, para establecer en el almacenamiento local el color del tema escogido, la cual recibe como argumento la cadena que representa el modo oscuro
+}
+
+function setColorSchemeToLS(value) { //Declaración de función, para establecer en el almacenamiento local el color del tema escogido, que posee el parámetro para recibir el valor del tema escogido, la cual ejecuta el siguiente bloque
+    try{ //Se intenta
+        window.localStorage.setItem(colorSchemeLSKey, value); //En el navegador, acceder a su almacenamiento local, y aplicar el método para establecer un nuevo elemento/archivo, con el nombre del valor de dicha constante, y el valor contenido es el que se recibe en el parámetro de la función
+    } catch { //Si hay un error, es capturado
+        console.log("Err en LS"); //Se llama a la consola del navegador, y se aplica el método de imprimir sobre la misma, la cadena
+    }
+}
+
+function getColorSchemeFromLS() { //Declaración de función, para obtener del almacenamiento local el color del tema escogido, la cual ejecuta el siguiente bloque
+    try{ //Se intenta
+        return window.localStorage.getItem(colorSchemeLSKey); //Retornar, del navegador, acceder a su almacenamiento local, y aplicar el método para obtener el elemento/archivo, con el nombre del valor de dicha constante
+    } catch { //Si hay un error, es capturado
+        console.log("Err en LS"); //Se llama a la consola del navegador, y se aplica el método de imprimir sobre la misma, la cadena
+    }
+}
+
+function readColorSchemeFromLS() { //Declaración de función, para leer del almacenamiento local el color del tema escogido, la cual ejecuta el siguiente bloque
+    let colorScheme = getColorSchemeFromLS(); //Declaración de variable con valor asignado de, ejecutar dicha función para obtener del almacenamiento local el color del tema escogido, la cual ejecuta el siguiente bloque
+
+    if (!colorScheme) { //Condicional que valida si, no hay algún elemento/archivo, con el nombre del valor de dicha constante
+        return //Si se cumple la condición anterior, se retorna si hacer nada
+    }
+
+    if (colorScheme === "light") { //Condicional que valida si, el valor retornado de dicha variable, es estrictamente igual, a dicha cadena
+        changeToLightMode(); //Si se cumple la condición anterior, se llama a ejecutar dicha función para cambiar a modo claro
+    } else if (colorScheme === "dark") { //Si no se cumple la condición anterior, se valida si, el valor retornado de dicha variable, es estrictamente igual, a dicha cadena
+        changeToDarkMode(); //Si se cumple la condición anterior, se llama a ejecutar dicha función para cambiar a modo oscuro
+    }
+}
+
+checkBoxElement.addEventListener('change', function () { //A dicho elemento obtenido mediante su selector de clase, se le agregra un escuchador de eventos, que detecta el evento de cambio en el elemento, ejecutando una expresión de función que ejecuta el siguiente bloque
+    if (this.checked) { //Condicional que valida si, el elemento que ejecutó el evento, tiene su propiedad de comprobado en verdadero/aplicado
+        changeToDarkMode(); //Si se cumple la condición anterios, se llama a ejecutar dicha función para cambiar a modo oscuro
+    } else { //Si no se cumple la condición anterior, se ejecuta el siguiente bloque
+        changeToLightMode(); //Se llama a ejecutar dicha función para cambiar a modo claro
+    }
+});
+
+readColorSchemeFromLS(); //Se llama a ejecutar dicha función para leer del almacenamiento local el color del tema escogido
+
+checkBoxElement.checked = isUsingDarkMode(); //A dicho elemento obtenido mediante su selector de clase, se accede a su propiedad de comprobado, y se le asigna como valor, el llamado a dicha función para detectar si se está usando el mode oscuro, para obtener un valor booleano
