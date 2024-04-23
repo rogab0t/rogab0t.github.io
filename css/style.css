@@ -718,17 +718,17 @@ svg.moon { /*Selector de tipo para dicho elemento HTML, que posea dicho selector
 
 @media(prefers-color-scheme: dark), (prefers-color-scheme: sistem){ /*Mediaqueri para, obtener del dispositivo, el color de tema oscuro seleccionado, y detectar del dispositivo, el color de tema sin seleccionar, para aplicar los siguientes estilos*/
     body:not(.force-light) { /*Selector de tipo para dicho elemento HTML, al no contener dicho selector de clase*/
-        --gray: #6a6c6f; /*Propiedad personalizada de color en hexadecimal*/
-        --light-gray: #a6a7aa; /*Propiedad personalizada de color en hexadecimal*/
-        --very--light-gray: #494949; /*Propiedad personalizada de color en hexadecimal*/
-        --green: #a23450; /*Propiedad personalizada de color en hexadecimal*/
-        --light--green: #741730;
-        --dark-blue: #122250A3; /*Propiedad personalizada de color en hexadecimal*/
-        --ligth-blue: #865cd4;
-        --white: #000000;
+        --gray: #ddcbf5;
+        --light-gray: #362e45;
+        --very--light-gray: #504465;
+        --green: #6bc7d6;
+        --light--green: #68ecd8;
+        --dark-blue: #a9afb0a3;
+        --ligth-blue: #ab90dd;
+        --white: #1F1B24;
         --black: #ffffff;
-        --sun-color: #dfdfdf; /*Propiedad personalizada de color en hexadecimal*/
-        --moon-color: #c0e4f7; /*Propiedad personalizada de color en hexadecimal*/
+        --sun-color: #ffef00;
+        --moon-color: #c0e4f7;
     }
 }
 
