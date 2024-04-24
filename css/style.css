@@ -617,8 +617,8 @@ svg.moon { /*Selector de tipo para dicho elemento HTML, que posea dicho selector
     #nav--logo { /*Selector identificador para el elemento HTML que lo posea*/
         position: absolute;
         z-index: 10;
-        background-color: var(--light-gray);
-        border: 2px solid var(--very--light-gray);
+        background-color: var(--white);
+        border: 2px solid var(--light-gray);
         width: 45px;
         height: 45px;
         border-radius: 8px 0;
