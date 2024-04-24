@@ -11,7 +11,7 @@
     --ligth-blue: #7dc5f8;
     --white: #FFFFFF;
     --black: #000000;
-    --sun-color: #bdb76b; /*Propiedad personalizada de color en hexadecimal*/
+    --sun-color: #ebc907; /*Propiedad personalizada de color en hexadecimal*/
     --moon-color: #022c43; /*Propiedad personalizada de color en hexadecimal*/
 }
 
@@ -85,9 +85,9 @@ body { /*Selector de tipo para el elemento HTML y sus elementos contenidos*/
 
 .dark-mode-controls { /*Selector de clase para el elemento HTML que lo posea*/
     position: fixed;
-    background-color: var(--white);
+    background-color: var(--light-gray);
     padding: 10px 5px;
-    border: 2px solid var(--black);
+    border: 2px solid var(--very--light-gray);
     border-radius: 20px 0;
     bottom: 65px;
     z-index: 8;
@@ -617,8 +617,8 @@ svg.moon { /*Selector de tipo para dicho elemento HTML, que posea dicho selector
     #nav--logo { /*Selector identificador para el elemento HTML que lo posea*/
         position: absolute;
         z-index: 10;
-        background-color: var(--white);
-        border: 2px solid var(--black);
+        background-color: var(--light-gray);
+        border: 2px solid var(--very--light-gray);
         width: 45px;
         height: 45px;
         border-radius: 8px 0;
@@ -725,8 +725,8 @@ svg.moon { /*Selector de tipo para dicho elemento HTML, que posea dicho selector
         --ligth-blue: #ab90dd;
         --white: #1F1B24;
         --black: #ffffff;
-        --sun-color: #ffef00;
-        --moon-color: #c0e4f7;
+        --sun-color: #ffbb00;
+        --moon-color: #e7f7ff;
     }
 }
 
@@ -740,6 +740,6 @@ body.force-dark { /*Selector de tipo para dicho elemento HTML, al contener dicho
     --ligth-blue: #ab90dd;
     --white: #1F1B24;
     --black: #ffffff;
-    --sun-color: #ffef00;
-    --moon-color: #c0e4f7;
+    --sun-color: #ffbb00;
+    --moon-color: #e7f7ff;
 }
