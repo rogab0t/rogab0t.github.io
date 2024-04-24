@@ -64,6 +64,8 @@ buttonCamara.addEventListener('click', function (e) { //A dicho elemento, se le 
 });
 
 botonFoto.addEventListener('click', function () { //A dicho elemento, se le aplica un escuchador de evento, el cual escucha el evento de "click", ejecutando una declaración de función la cual ejecuta el siguiente bloque
+    alert("Ahora tienes una foto con rei chiquita :3");
+    
     const tempCanvas = document.createElement('canvas'); //Declaración de constante, con valor asignado, al documento HTML, crear un elemento, el cual un elemento "canvas", para ser un canvas temporal
     tempCanvas.width = camera.clientWidth; //Al elemento canvas temporal, se le accede a su propiedad de ancho, al  que se le asigna como valor, el ancho interior del elemento "camera"
     tempCanvas.height = camera.clientHeight; //Al elemento canvas temporal, se le accede a su propiedad de alto, al  que se le asigna como valor, el alto interior del elemento "camera"
@@ -236,9 +238,9 @@ function isUsingDarkMode() { //Declaración de función, para detectar si se est
     let bodyElement = document.querySelector('body'); //Declaración de variable con valor asignado de, del documento HTML, obtener el primer elemento mediante su selector, el cual es el de tipo dentro de las comillas de los paréntesis
     let bodyStyle = getComputedStyle(bodyElement); //Declaración de variable con valor asignado de, obtener los estilos computados/aplicados, del elemento anterior obtenido mediante su selector
     let bodyBackgroundColor = bodyStyle.backgroundColor //Declaración de variable con valor asignado de, de dichos estilos computados obtenidos, obtener la propiedad de color de fondo
-    let darkModeBgColor = 'rgb(13, 27, 30)'; //Declaración de variable con valor asignado de, una cadena que representa un color en rgb
+    let darkModeBgColor = 'rgb(31, 27, 36)'; //Declaración de variable con valor asignado de, una cadena que representa un color en rgb
 
-    return darkModeBgColor === bodyBackgroundColor; //Se retorna la comparación de, el valor de dicha variable que es el color de fondo del modo oscuro, con el valor de dicha variable que es el color de fondo computado del elemento obtenido mediante su selector de clase
+    return bodyBackgroundColor === darkModeBgColor; //Se retorna la comparación de, el valor de dicha variable que es el color de fondo del modo oscuro, con el valor de dicha variable que es el color de fondo computado del elemento obtenido mediante su selector de clase
 }
 
 function changeToLightMode() { //Declaración de función, para cambiar a modo claro, la cual ejecuta el siguiente bloque
@@ -293,6 +295,7 @@ checkBoxElement.addEventListener('change', function () { //A dicho elemento obte
     }
 });
 
-readColorSchemeFromLS(); //Se llama a ejecutar dicha función para leer del almacenamiento local el color del tema escogido
-
-checkBoxElement.checked = isUsingDarkMode(); //A dicho elemento obtenido mediante su selector de clase, se accede a su propiedad de comprobado, y se le asigna como valor, el llamado a dicha función para detectar si se está usando el mode oscuro, para obtener un valor booleano
+window.addEventListener('DOMContentLoaded', () => {
+    readColorSchemeFromLS(); //Se llama a ejecutar dicha función para leer del almacenamiento local el color del tema escogido
+    checkBoxElement.checked = isUsingDarkMode(); //A dicho elemento obtenido mediante su selector de clase, se accede a su propiedad de comprobado, y se le asigna como valor, el llamado a dicha función para detectar si se está usando el mode oscuro, para obtener un valor booleano
+})

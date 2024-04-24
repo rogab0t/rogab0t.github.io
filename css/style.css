@@ -711,6 +711,7 @@ svg.moon { /*Selector de tipo para dicho elemento HTML, que posea dicho selector
 
     #boton__foto { /*Selector de indentificador para el elemento HTML que lo posea*/
         width: 100%; /*Propiedad de ancho, con valor del 100% de su contenedor*/
+        background-color: var(--white);
     }
 }
 
