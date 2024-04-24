@@ -85,9 +85,9 @@ body { /*Selector de tipo para el elemento HTML y sus elementos contenidos*/
 
 .dark-mode-controls { /*Selector de clase para el elemento HTML que lo posea*/
     position: fixed;
-    background-color: var(--light-gray);
+    background-color: var(--white);
     padding: 10px 5px;
-    border: 2px solid var(--very--light-gray);
+    border: 2px solid var(--light-gray);
     border-radius: 20px 0;
     bottom: 65px;
     z-index: 8;
